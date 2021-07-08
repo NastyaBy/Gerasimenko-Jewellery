@@ -1,0 +1,37 @@
+@import "../variables.scss";
+@import "../mixins/media.scss";
+
+.mailing-form {
+  h2 {
+    font-family: $accent-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 44px;
+    letter-spacing: 0.03em;
+  }
+
+  p {
+    color: $mailing-form-text;
+  }
+
+  button {
+    color: $basic-white;
+    font-family: $general-font;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    background: none;
+    border: none;
+
+
+    svg {
+      color: $basic-white;
+    }
+  }
+}
+
+.mailing-form__row {
+  padding: 5px;
+  border-bottom: 1px solid $basic-white;
+}

@@ -1,0 +1,10 @@
+@import "../variables.scss";
+@import "../mixins/media.scss";
+
+.header {
+  display: flex;
+  align-items: center;
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+}

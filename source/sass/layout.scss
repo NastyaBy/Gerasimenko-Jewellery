@@ -1,0 +1,46 @@
+@import "variables.scss";
+@import "./mixins/media";
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0;
+  font-family: $general-font;
+  font-size: 16px;
+  line-height: 21px;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.layout__header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.layout__main {
+  flex-grow: 1;
+}
+
+.layout__footer {
+  color: $basic-white;
+  background: $basic-dark;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
