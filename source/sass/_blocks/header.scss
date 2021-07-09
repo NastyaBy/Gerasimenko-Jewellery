@@ -28,17 +28,15 @@
     color: $header-text;
     font-weight: 500;
     text-decoration: none;
-
-    svg {
-      display: none;
-
-      @include media-tablet {
-        display: block;
-      }
-    }
   }
+}
 
+.header__info-icon {
+  display: none;
 
+  @include media-tablet {
+    display: block;
+  }
 }
 
 .header-nav {
@@ -49,7 +47,7 @@
   text-align: center;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: -20px;
     left: 50%;
