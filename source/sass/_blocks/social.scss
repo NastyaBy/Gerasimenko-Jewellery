@@ -1,0 +1,39 @@
+@import "../variables.scss";
+@import "../mixins/media.scss";
+
+.social {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  list-style: none;
+
+  @include media-mobile {
+    display: grid;
+    grid-auto-flow: column;
+    justify-self: center;
+    gap: 30px;
+    grid-template-columns: 20px 20px 20px 20px;
+  }
+
+  a {
+    display: inline-flex;
+    color: $basic-white;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    text-decoration: none;
+    align-items: center;
+
+    @include media-mobile {
+      font-size: 0;
+      line-height: 0;
+      text-align: center;
+    }
+
+    svg {
+      display: block;
+      margin-right: 15px;
+    }
+  }
+}

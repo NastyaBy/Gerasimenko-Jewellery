@@ -3,6 +3,8 @@
 
 .mailing-form {
   h2 {
+    margin: 0;
+    padding: 0 0 25px;
     font-family: $accent-font;
     font-style: normal;
     font-weight: bold;
@@ -12,10 +14,17 @@
   }
 
   p {
+    margin: 0;
+    padding: 0;
     color: $mailing-form-text;
   }
 
   button {
+    position: relative;
+    max-width: 103px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
     color: $basic-white;
     font-family: $general-font;
     font-weight: 500;
@@ -24,14 +33,16 @@
     background: none;
     border: none;
 
-
     svg {
+      position: absolute;
+      top: 50%;
+
       color: $basic-white;
     }
   }
 }
 
 .mailing-form__row {
-  padding: 5px;
+  display: flex;
   border-bottom: 1px solid $basic-white;
 }

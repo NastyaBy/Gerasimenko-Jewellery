@@ -17,38 +17,49 @@
 
 <header class="layout__header">
   <div class="header">
-    <div class="search">
+    <form class="search">
+      <button type="submit">
+        <svg width="14" height="14">
+          <use xlink:href="#search"></use>
+        </svg>
+      </button>
       <label class="visually-hidden" for="search-header">Search</label>
-      <input type="search" id="search-header">
-    </div>
+      <input type="search" placeholder="Type here to search" id="search-header">
+    </form>
     <a class="header__logo" aria-label="logotype Jewellery">
       <img src="./img/logo.svg" alt="logotype Jewellery" width="66" height="66">
     </a>
-    <div>
+    <div class="header__info">
       <a href="#" aria-label="Login">Login</a>
-      <a href="#" aria-label="Card">Card 0</a>
+      <a href="#" aria-label="Card">
+        <svg width="20" height="18">
+          <use xlink:href="#card"></use>
+        </svg>
+        Card 0</a>
     </div>
-    <nav class="header__nav">
-      <a href="#" aria-label="What’s new">What’s new</a>
-      <a href="#" aria-label="Chokers">Chokers</a>
-      <a href="#" aria-label="Necklaces">Necklaces</a>
-      <a href="#" aria-label="Rings">Rings</a>
-      <a href="#" aria-label="Earrings">Earrings</a>
-    </nav>
   </div>
-
+  <nav class="header-nav">
+    <a href="#" aria-label="What’s new">What’s new</a>
+    <a href="#" aria-label="Chokers">Chokers</a>
+    <a href="#" aria-label="Necklaces">Necklaces</a>
+    <a href="#" aria-label="Rings">Rings</a>
+    <a href="#" aria-label="Earrings">Earrings</a>
+  </nav>
 </header>
 
 <main class="layout__main"></main>
 
 <footer class="layout__footer">
   <div class="footer">
-    <div class="footer__col">
+    <div class="footer__col footer__col--mailing-form">
       <form class="mailing-form">
         <h2>The good stuff in your inbox </h2>
         <p>News and updates from CH. No spam, we promise.</p>
         <div class="mailing-form__row">
-          <input>
+          <div class="form-input">
+            <label class="visually-hidden" for="your-email">Your e-mail</label>
+            <input id="your-email" type="text" placeholder="Your E-mail">
+          </div>
           <button type="submit">Sign Up
             <svg width="30" height="11">
               <use xlink:href="#arrow-forward"></use>
@@ -57,7 +68,7 @@
         </div>
       </form>
     </div>
-    <div class="footer__col">
+    <div class="footer__col footer__col--section">
       <ul class="footer-nav">
         <li>
           <a href="#" aria-label="Ordering & Payment">Ordering & Payment</a>
@@ -87,27 +98,32 @@
         </li>
       </ul>
     </div>
-    <div class="footer__col footer__col--social">
-      <a href="#" aria-label="Facebook">
-        <svg width="8" height="15">
-          <use xlink:href="#icon-facebook"></use>
-        </svg>
-        Facebook</a>
-      <a href="#" aria-label="Instagram">
-        <svg width="15" height="15">
-          <use xlink:href="#icon-instagram"></use>
-        </svg>
-        Instagram</a>
-      <a href="#" aria-label="Pinterest">
-        <svg width="16" height="15">
-          <use xlink:href="#icon-pinterest"></use>
-        </svg>
-        Pinterest</a>
-      <a href="#" aria-label="Twitter">
-        <svg width="15" height="13">
-          <use xlink:href="#icon-twitter"></use>
-        </svg>
-        Twitter</a>
+    <div class="footer__col ">
+      <ul class="social">
+        <li>
+          <a href="#" aria-label="Facebook">
+            <svg width="8" height="15">
+              <use xlink:href="#icon-facebook"></use>
+            </svg>
+            Facebook
+          </a>
+        </li>
+        <li><a href="#" aria-label="Instagram">
+          <svg width="15" height="15">
+            <use xlink:href="#icon-instagram"></use>
+          </svg>
+          Instagram</a></li>
+        <li><a href="#" aria-label="Pinterest">
+          <svg width="16" height="15">
+            <use xlink:href="#icon-pinterest"></use>
+          </svg>
+          Pinterest</a></li>
+        <li><a href="#" aria-label="Twitter">
+          <svg width="15" height="13">
+            <use xlink:href="#icon-twitter"></use>
+          </svg>
+          Twitter</a></li>
+      </ul>
     </div>
   </div>
 
@@ -116,6 +132,14 @@
 <div class="modal js-modal" data-popup-modal="modal"></div>
 
 <svg style="display: none;">
+
+  <symbol id="search" viewBox="0 0 14 14" fill="none">
+    <path d="M11.048 10.074L14 13.024l-.975.976-2.951-2.952A6.205 6.205 0 010 6.202 6.205 6.205 0 016.203 0a6.205 6.205 0 014.845 10.074zm-1.382-.512a4.808 4.808 0 001.36-3.36 4.823 4.823 0 00-4.823-4.824 4.822 4.822 0 00-4.825 4.825 4.823 4.823 0 004.825 4.824 4.808 4.808 0 003.36-1.361l.103-.104z" fill="currentColor"></path>
+  </symbol>
+
+  <symbol id="card" viewBox="0 0 20 18" fill="none">
+    <path d="M14 5a4 4 0 11-8 0M1 1h18v16H1V1z" stroke="#1D1613" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+  </symbol>
 
   <symbol id="arrow-forward" viewBox="0 0 30 11" fill="none">
     <path d="M0 5.5h29m0 0L23.514 1M29 5.5L23.514 10" fill="currentColor"></path>

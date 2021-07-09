@@ -1,0 +1,32 @@
+@import "../variables.scss";
+@import "../mixins/media.scss";
+
+.search {
+  position: relative;
+
+  button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: transparent;
+    border: none;
+
+    svg {
+      display: block;
+    }
+  }
+
+  input {
+    margin: 0;
+    padding: 0 0 0 34px;
+    font-family: $general-font;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: $search-text;
+    background-color: transparent;
+    border: none;
+  }
+}

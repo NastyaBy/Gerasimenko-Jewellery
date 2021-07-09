@@ -4,7 +4,63 @@
 .header {
   display: flex;
   align-items: center;
-  max-width: 1170px;
-  width: 100%;
+  max-width: 1180px;
   margin: 0 auto;
+}
+
+.header__logo {
+  margin: 0 auto;
+  padding: 30px 0 19px;
+  width: 66px;
+  height: 66px;
+}
+
+.header__info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  a {
+    margin-left: 35px;
+    align-items: center;
+    color: $header-text;
+    font-weight: 500;
+    text-decoration: none;
+
+    svg {
+      display: none;
+
+      @include media-tablet {
+        display: block;
+      }
+    }
+  }
+
+
+}
+
+.header-nav {
+  position: relative;
+  display: block;
+  max-width: 1180px;
+  margin: 20px auto;
+  text-align: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    width: 100vw;
+    border-top: 1px solid $border-top-nav-color;
+    transform: translate(-50%, 0);
+  }
+
+  a {
+    margin: 0 35px;
+    color: $header-text;
+    text-decoration: none;
+  }
 }

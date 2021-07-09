@@ -1,0 +1,13 @@
+@import "../variables.scss";
+@import "../mixins/media.scss";
+
+.form-input {
+  flex-grow: 1;
+
+  input {
+    margin: 0;
+    padding: 15px 0;
+    background-color: transparent;
+    border: none;
+  }
+}
