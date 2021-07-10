@@ -6,6 +6,13 @@
   align-items: center;
   max-width: 1180px;
   margin: 0 auto;
+
+  @include media-tablet {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 0 45px;
+  }
 }
 
 .header__logo {
@@ -13,6 +20,13 @@
   padding: 30px 0 19px;
   width: 66px;
   height: 66px;
+
+  @include media-tablet {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
 }
 
 .header__info {
@@ -21,6 +35,13 @@
   justify-content: flex-end;
   align-items: flex-start;
   flex-wrap: wrap;
+
+  @include media-tablet {
+    grid-column-start: 3;
+    grid-column-end: -1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
 
   a {
     margin-left: 35px;
@@ -31,11 +52,29 @@
   }
 }
 
-.header__info-icon {
-  display: none;
+.header__link--card {
+  text-align: center;
 
   @include media-tablet {
-    display: block;
+    font-size: 0;
+    line-height: 0;
+  }
+
+  svg {
+    display: none;
+
+    @include media-tablet {
+      display: block;
+      font-size: 0;
+      line-height: 0;
+      text-align: center;
+    }
+  }
+}
+
+.header__link--login {
+  @include media-tablet {
+    display: none;
   }
 }
 
@@ -45,6 +84,23 @@
   max-width: 1180px;
   margin: 20px auto;
   text-align: center;
+
+  @include media-tablet {
+    //display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    margin: 0;
+    padding: 231px 0 0;
+    overflow: auto;
+  }
 
   &::before {
     content: "";
@@ -60,5 +116,30 @@
     margin: 0 35px;
     color: $header-text;
     text-decoration: none;
+
+    @include media-tablet {
+      margin: 0;
+    }
+  }
+}
+
+.header-toggle {
+  display: none;
+
+  @include media-tablet {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 0 0;
+    padding: 0;
+    flex-shrink: 0;
+    flex-grow: 0;
+    box-sizing: border-box;
+    border: none;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='18' fill='none'%3E%3Cpath d='M0 1h25M0 9h25M0 17h25' stroke='%231D1613' stroke-width='2'/%3E%3C/svg%3E") 50% 50%/31px auto no-repeat;
   }
 }

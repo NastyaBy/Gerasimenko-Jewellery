@@ -4,6 +4,14 @@
 .search {
   position: relative;
 
+  @include media-tablet {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 2;
+    grid-row-end: -1;
+    width: 100%;
+  }
+
   button {
     position: absolute;
     top: 0;
