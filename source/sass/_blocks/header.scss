@@ -46,8 +46,8 @@
   a {
     margin-left: 35px;
     align-items: center;
-    color: $header-text;
     font-weight: 500;
+    color: $basic-text;
     text-decoration: none;
   }
 }
@@ -79,8 +79,9 @@
 }
 
 .header-nav {
+
   position: relative;
-  display: block;
+  display: block; display: none;
   max-width: 1180px;
   margin: 20px auto;
   text-align: center;
@@ -98,8 +99,10 @@
     justify-content: flex-start;
     flex-wrap: nowrap;
     margin: 0;
-    padding: 231px 0 0;
+    padding: 231px 45px 0;
+    text-align: start;
     overflow: auto;
+    background: $accent-color;
   }
 
   &::before {
@@ -114,12 +117,29 @@
 
   a {
     margin: 0 35px;
-    color: $header-text;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: $basic-text;
     text-decoration: none;
 
     @include media-tablet {
       margin: 0;
+      padding: 10px 0;
+      font-size: 24px;
+      line-height: 36px;
+      color: $basic-white;
     }
+  }
+}
+
+a.header-nav__link--additional {
+  display: none;
+
+  @include media-tablet {
+    display: block;
+    color: $header-nav-link-additional;
   }
 }
 

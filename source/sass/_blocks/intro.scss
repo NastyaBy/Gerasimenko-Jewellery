@@ -1,0 +1,62 @@
+@import "../variables.scss";
+@import "../mixins/media.scss";
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 195px 0;
+  font-family: $accent-font;
+  color: $basic-white;
+  text-align: center;
+  background: $accent-color url("../img/main-desktop@1x.jpg") 50% 50% no-repeat;
+  overflow: hidden;
+
+  @include retina-size {
+    background: url("../img/main-desktop@2x.jpg") 50% 50% no-repeat;
+  }
+
+  @include media-tablet {
+    background: url("../img/main-tablet@1x.jpg") 50% 50% no-repeat;
+
+    @include retina-size {
+      background: url("../img/main-tablet@2x.jpg") 50% 50% no-repeat;
+    }
+  }
+
+  @include media-mobile {
+    background: url("../img/main-mobile@1x.jpg") 50% 50% no-repeat;
+
+    @include retina-size {
+      background: url("../img/main-mobile@2x.jpg") 50% 50% no-repeat;
+    }
+  }
+
+  h2 {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 58px;
+    text-transform: uppercase;
+
+    @include media-mobile {
+      font-size: 38px;
+      line-height: 49px;
+    }
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 38px;
+    line-height: 49px;
+
+    @include media-mobile {
+      font-size: 34px;
+      line-height: 44px;
+    }
+  }
+}
