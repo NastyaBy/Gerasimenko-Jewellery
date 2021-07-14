@@ -14,7 +14,8 @@
     font-style: normal;
     font-weight: bold;
     font-size: 34px;
-    line-height: 130%;
+    line-height: 44px;
+    letter-spacing: 0.03em;
   }
 
   a {
@@ -55,15 +56,16 @@
 .blog__info {
   padding: 70px 60px;
 
-p {
-  margin: 0;
-  padding: 0;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 18px;
-  color: $blog-data-color;
-}
+  p {
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: $blog-data-color;
+  }
+
   h3 {
     font-family: $accent-font;
     font-style: normal;

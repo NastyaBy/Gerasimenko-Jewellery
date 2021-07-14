@@ -28,7 +28,6 @@
     text-decoration: none;
     border-bottom: 1px solid $accent-color;
   }
-
 }
 
 .new-product__list {
@@ -39,7 +38,7 @@
   margin: 60px auto 0;
 
   @include media-tablet {
-    grid-template-columns: 1fr 1fr
+    grid-template-columns: 1fr 1fr;
   }
 
   a {
@@ -89,7 +88,6 @@
 }
 
 .new-product__nav {
-
   a {
     border: none;
   }
