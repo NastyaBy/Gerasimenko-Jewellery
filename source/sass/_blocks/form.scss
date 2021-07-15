@@ -1,0 +1,40 @@
+@import "../variables.scss";
+@import "../mixins/media.scss";
+
+.form {
+  padding: 45px 60px;
+
+  h2 {
+    font-family: $accent-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 44px;
+    color: $basic-text;
+    text-align: center;
+  }
+}
+
+.form__sign-up {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+
+  p {
+    margin: 0;
+    padding: 0 5px 0 0;
+    color: $mailing-form-text;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  a {
+    color: $basic-text;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+  }
+}

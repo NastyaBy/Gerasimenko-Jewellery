@@ -1,0 +1,50 @@
+@import "../variables.scss";
+@import "../mixins/media.scss";
+
+.album {
+  max-width: 1180px;
+  margin: 0 auto 145px;
+  text-align: center;
+
+  h2 {
+    margin: 0 0 23px;
+    padding: 0;
+    color: $basic-text;
+    font-family: $accent-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 44px;
+    letter-spacing: 0.03em;
+  }
+
+  a {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: $basic-text;
+    text-decoration: none;
+    border-bottom: 1px solid $accent-color;
+  }
+}
+
+.album__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: min-content min-content;
+  margin: 60px auto 0;
+  gap: 34px 27px;
+
+  @include media-tablet {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content min-content min-content;
+  }
+}
+
+.album__item--big {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}

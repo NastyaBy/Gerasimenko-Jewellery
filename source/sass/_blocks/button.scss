@@ -1,0 +1,32 @@
+@import "../variables.scss";
+@import "../mixins/media.scss";
+
+.button {
+  margin: 0;
+  padding: 28px 23px;
+  font-family: $general-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: $basic-white;
+  background: $accent-color;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid $accent-color;
+  box-sizing: border-box;
+
+  &:hover {
+    color: $accent-color;
+    background-color: $basic-white;
+    border: 1px solid $accent-color;
+  }
+
+  &:focus {
+    opacity: 1;
+    color: $basic-white;
+    background-color: $accent-color;
+  }
+}
