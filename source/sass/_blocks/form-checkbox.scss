@@ -1,0 +1,80 @@
+@import "../variables.scss";
+@import "../mixins/media.scss";
+
+.form-checkbox {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+  margin-bottom: 10px;
+  font-family: $general-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: $basic-text;
+
+  &--feedback {
+    margin: 0 0 0 10px;
+    order: 1;
+
+    @include media-mobile {
+      margin: 0;
+    }
+  }
+
+  &--modal {
+    margin: 0 0 20px 0;
+    order: 1;
+
+    label {
+      &::before {
+        margin-right: 28px;
+      }
+    }
+  }
+}
+
+.form-checkbox__control {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+
+  &:checked {
+    $checkboxIsChecked: & !global;
+  }
+
+  &:focus {
+    $checkboxIsFocus: & !global;
+  }
+}
+
+.form-checkbox__text {
+  display: inline-flex;
+  user-select: none;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    margin-right: 10px;
+    border: 1px solid $accent-color;
+    box-sizing: border-box;
+    background-size: 16px 16px;
+  }
+
+
+  #{$checkboxIsChecked} + & {
+    &::before {
+      background: $accent-color;
+    }
+  }
+
+  #{$checkboxIsFocus} + & {
+    &::before {
+      box-shadow: 0 0 0 3px $basic-white;
+    }
+  }
+}

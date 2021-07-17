@@ -1,0 +1,35 @@
+@import "../variables.scss";
+@import "../mixins/media.scss";
+
+.form-slider {
+  position: relative;
+}
+
+.form-slider__info {
+  position: absolute;
+}
+
+.form-slider__info--inverse {
+  position: absolute;
+  height: 2px;
+  border-radius: 10px;
+  margin: 0 7px;
+
+  &.left {
+    right: 0;
+    width: 70%;
+  }
+
+  &.right {
+    right: 0;
+    width: 70%;
+  }
+}
+
+.form-slider__info--range {
+  position: absolute;
+  left: 16%;
+  right: 33%;
+  height: 2px;
+  border-radius: 14px;
+}

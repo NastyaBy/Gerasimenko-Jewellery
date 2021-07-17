@@ -48,6 +48,9 @@
 
 .new-product__item {
   padding-bottom: 30px;
+  text-align: center;
+  color: $basic-text;
+  text-decoration: none;
 
   img {
     width: 270px;
@@ -67,6 +70,7 @@
   h3 {
     margin: 25px 0 15px;
     padding: 0;
+    font-family: $general-font;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -74,6 +78,7 @@
   }
 
   strong {
+    font-family: $general-font;
     font-style: normal;
     font-weight: bold;
     font-size: 14px;

@@ -1,0 +1,30 @@
+@import "../variables.scss";
+@import "../mixins/media.scss";
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  font-family: $general-font;
+
+
+  a {
+    padding: 5px;
+    color: $basic-text;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    text-decoration: none;
+  }
+}
+
+.pagination__nav {
+  a {
+    color: $mailing-form-text;
+  }
+
+}
+
+a.pagination__link--active {
+    color: $basic-text;
+}

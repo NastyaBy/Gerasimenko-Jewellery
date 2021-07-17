@@ -29,4 +29,24 @@
     color: $basic-white;
     background-color: $accent-color;
   }
+
+  &--white {
+    color: $basic-text;
+    border: 1px solid $accent-color;
+    background: $basic-white;
+
+    &:hover {
+      color: $accent-color;
+      background-color: $basic-white;
+      border: 1px solid $accent-color;
+    }
+
+    &:focus {
+      opacity: 1;
+      color: $basic-white;
+      background-color: $accent-color;
+    }
+  }
 }
+
+

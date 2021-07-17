@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Jewellery">
+  <meta name="keywords" content="Necklaces, Chokers, Rings, Earrings">
+  <meta name="theme-color" content="#A87B62">
+  <title>Login Jewellery</title>
+  <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="preload" href="./fonts/poppins-regular.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="./fonts/cormorant-garamond-bold.woff2" as="font" type="font/woff2">
+</head>
+
+<body>
+
+<main>
+  <div class="modal js-modal" data-popup-modal="login">
+    <div class="modal__inner">
+      <img src="./img/sweet-ice-cream-photography@1x.jpg" srcset="./img/sweet-ice-cream-photography@2x.jpg 2x" width="430" height="138" alt="sweet-ice-cream-photography">
+      <form class="form js-form" name="modalForm" id="modalForm" action="https://echo.htmlacademy.ru" method="get">
+        <h2>Log In</h2>
+        <div class="form-input form-input--modal">
+          <label class="visually-hidden" for="e-mail">Your E-mail</label>
+          <input class="js-validateEmail" type="text" maxlength="50" id="e-mail" name="e-mail" placeholder="Your E-mail" aria-label="Your E-mail" required="">
+        </div>
+        <div class="form-input form-input--modal">
+          <label class="visually-hidden" for="password">Password</label>
+          <input class="js-validatePassword" id="password" name="password" type="password" maxlength="50" placeholder="Password" aria-label="Password" required="">
+        </div>
+        <a href="#" aria-label="Forgot your password?">Forgot your password?</a>
+        <button class="button js-sendForm" type="submit" aria-label="Log In">Log In</button>
+        <div class="form__sign-up">
+          <p>Don’t have an account?</p>
+          <a href="#">Sign up</a>
+        </div>
+        <button class="modal__button-close js-modalCloseBtn" type="reset" aria-label="Close login in">
+          <svg width="17" height="17">
+            <use xlink:href="#close-icon"></use>
+          </svg>
+        </button>
+      </form>
+    </div>
+    <i class="modal__blackout js-modalBlackout"></i>
+  </div>
+</main>
+
+
+<script src="./js/main.js"></script>
+</body>
+</html>
