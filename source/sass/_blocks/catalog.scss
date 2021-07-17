@@ -9,7 +9,7 @@
   max-width: 1180px;
 
   @include media-tablet {
-    grid-template-columns: 1fr
+    grid-template-columns: 1fr;
   }
 }
 
@@ -19,7 +19,7 @@
   grid-template-rows: 1fr 1fr 1fr 1fr;
   gap: 30px;
 
-  @include media-mobile{
+  @include media-mobile {
     grid-template-columns: 1fr 1fr;
   }
 }

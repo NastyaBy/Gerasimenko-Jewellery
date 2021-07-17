@@ -12,25 +12,25 @@
   font-size: 14px;
   line-height: 18px;
   color: $basic-text;
+}
 
-  &--feedback {
-    margin: 0 0 0 10px;
-    order: 1;
+.form-checkbox--modal {
+  margin: 0 0 20px 0;
+  order: 1;
 
-    @include media-mobile {
-      margin: 0;
+  label {
+    &::before {
+      margin-right: 28px;
     }
   }
+}
 
-  &--modal {
-    margin: 0 0 20px 0;
-    order: 1;
+.form-checkbox--feedback {
+  margin: 0 0 0 10px;
+  order: 1;
 
-    label {
-      &::before {
-        margin-right: 28px;
-      }
-    }
+  @include media-mobile {
+    margin: 0;
   }
 }
 

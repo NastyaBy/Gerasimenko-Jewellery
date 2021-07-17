@@ -94,6 +94,12 @@
 
 .new-product__nav {
   a {
+    color: $mailing-form-text;
     border: none;
   }
+}
+
+
+a.new-product__link--active {
+  color: $basic-text;
 }

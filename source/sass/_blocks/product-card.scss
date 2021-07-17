@@ -1,0 +1,52 @@
+@import "../variables.scss";
+@import "../mixins/media.scss";
+
+.product-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  margin: 0 auto;
+  max-width: 1180px;
+  text-align: center;
+
+  @include media-mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.product-card__pictures {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 30px;
+
+  @include media-tablet {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr min-content;
+  }
+
+  @include media-mobile {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+
+  &--big {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 4;
+
+    @include media-tablet {
+      grid-column-start: 1;
+      grid-column-end: 4;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+
+    @include media-mobile {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+    }
+  }
+}
