@@ -59,28 +59,28 @@
       line-height: 44px;
     }
   }
+}
 
-  &--catalog {
-    background: $accent-color url("../img/annicken-kzam-unsplash-desktop@1x.jpg") 50% 50% no-repeat;
+.intro--catalog {
+  background: $accent-color url("../img/annicken-kzam-unsplash-desktop@1x.jpg") 50% 50% no-repeat;
+
+  @include retina-size {
+    background: url("../img/annicken-kzam-unsplash-desktop@2x.jpg") 50% 50% no-repeat;
+  }
+
+  @include media-tablet {
+    background: url("../img/annicken-kzam-unsplash-tablet@1x.jpg") 50% 50% no-repeat;
 
     @include retina-size {
-      background: url("../img/annicken-kzam-unsplash-desktop@2x.jpg") 50% 50% no-repeat;
+      background: url("../img/annicken-kzam-unsplash-tablet@2x.jpg") 50% 50% no-repeat;
     }
+  }
 
-    @include media-tablet {
-      background: url("../img/annicken-kzam-unsplash-tablet@1x.jpg") 50% 50% no-repeat;
+  @include media-mobile {
+    background: url("../img/annicken-kzam-unsplash-mobile@1x.jpg") 50% 50% no-repeat;
 
-      @include retina-size {
-        background: url("../img/annicken-kzam-unsplash-tablet@2x.jpg") 50% 50% no-repeat;
-      }
-    }
-
-    @include media-mobile {
-      background: url("../img/annicken-kzam-unsplash-mobile@1x.jpg") 50% 50% no-repeat;
-
-      @include retina-size {
-        background: url("../img/annicken-kzam-unsplash-mobile@2x.jpg") 50% 50% no-repeat;
-      }
+    @include retina-size {
+      background: url("../img/annicken-kzam-unsplash-mobile@2x.jpg") 50% 50% no-repeat;
     }
   }
 }

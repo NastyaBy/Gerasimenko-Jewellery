@@ -22,70 +22,159 @@
     <p>Discover picks of fashion's finest trends in our jewellery catalog</p>
   </section>
 
-  <section>
-    <div>
-      <a class="new-product__item" href="#">
-        <img src="./img/purple-gemstone-necklace@1x.jpg" srcset="./img/purple-gemstone-necklace@2x.jpg 2x" width="270" height="284" alt="Necklace with amethyst">
-        <h3>Double pearl earrings </h3>
-        <strong>$ 115</strong>
-      </a>
-      <a class="new-product__item" href="#">
-        <img src="./img/layered-choker-necklace@1x.jpg" srcset="./img/layered-choker-necklace@2x.jpg 2x" width="270" height="284" alt="Layered сhoker">
-        <h3>Choker with gold bead</h3>
-        <strong>$ 55</strong>
-      </a>
-      <a class="new-product__item" href="#">
-        <img src="./img/dainty-gold-necklace@1x.jpg" srcset="./img/dainty-gold-necklace@2x.jpg 2x" width="270" height="284" alt="Gold chain">
-        <h3>Gold layered necklace</h3>
-        <strong>$ 155</strong>
-      </a>
-      <a class="new-product__item" href="#">
-        <img src="./img/galaxy-earrings@1x.jpg" srcset="./img/galaxy-earrings@2x.jpg 2x" width="270" height="284" alt="Galaxy earrings">
-        <h3>Blue gemstone pendant</h3>
-        <strong>$ 105</strong>
-      </a>
-      <a class="new-product__item" href="#">
-        <img src="./img/galaxy-earrings@1x.jpg" srcset="./img/galaxy-earrings@2x.jpg 2x" width="270" height="284" alt="Galaxy earrings">
-        <h3>Boho earrings</h3>
-        <strong>$ 75</strong>
-      </a>
-      <a class="new-product__item" href="#">
-        <img src="./img/galaxy-earrings@1x.jpg" srcset="./img/galaxy-earrings@2x.jpg 2x" width="270" height="284" alt="Galaxy earrings">
-        <h3>Gold bird necklace</h3>
-        <strong>$ 135</strong>
-      </a>
-      <a class="new-product__item" href="#">
-        <img src="./img/galaxy-earrings@1x.jpg" srcset="./img/galaxy-earrings@2x.jpg 2x" width="270" height="284" alt="Galaxy earrings">
-        <h3>Black leather choker</h3>
-        <strong>$ 85</strong>
-      </a>
-      <a class="new-product__item" href="#">
-        <img src="./img/galaxy-earrings@1x.jpg" srcset="./img/galaxy-earrings@2x.jpg 2x" width="270" height="284" alt="Galaxy earrings">
-        <h3>Necklace with amethyst</h3>
-        <strong>$ 145</strong>
-      </a>
-      <a class="new-product__item" href="#">
-        <img src="./img/galaxy-earrings@1x.jpg" srcset="./img/galaxy-earrings@2x.jpg 2x" width="270" height="284" alt="Galaxy earrings">
-        <h3>Elephant earrings</h3>
-        <strong>$ 95</strong>
-      </a>
-      <a class="new-product__item" href="#">
-        <img src="./img/galaxy-earrings@1x.jpg" srcset="./img/galaxy-earrings@2x.jpg 2x" width="270" height="284" alt="Galaxy earrings">
-        <h3>Threader necklace</h3>
-        <strong>$ 115</strong>
-      </a>
-      <a class="new-product__item" href="#">
-        <img src="./img/galaxy-earrings@1x.jpg" srcset="./img/galaxy-earrings@2x.jpg 2x" width="270" height="284" alt="Galaxy earrings">
-        <h3>Origami crane necklace</h3>
-        <strong>$ 105</strong>
-      </a>
-      <a class="new-product__item" href="#">
-        <img src="./img/galaxy-earrings@1x.jpg" srcset="./img/galaxy-earrings@2x.jpg 2x" width="270" height="284" alt="Galaxy earrings">
-        <h3>Marble earrings</h3>
-        <strong>$ 95</strong>
-      </a>
+  <section class="catalog">
+    <h2 class="visually-hidden">Catalog</h2>
+    <div class="filter">
+      <div>
+        <div class="filter__item">
+          <h3>Product</h3>
+          <div class="filter__content filter__content--toggle">
+            <div class="form-checkbox">
+              <input class="form-checkbox__control" type="checkbox" name="color" id="necklaces" value="Necklaces" checked="checked">
+              <label class="form-checkbox__text" for="necklaces">Necklaces</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="form-checkbox__control" type="checkbox" name="color" id="chokers" value="Chokers" checked="checked">
+              <label class="form-checkbox__text" for="chokers">Chokers</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="form-checkbox__control" type="checkbox" name="color" id="rings" value="Rings">
+              <label class="form-checkbox__text" for="rings">Rings</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="form-checkbox__control" type="checkbox" name="color" id="earrings" value="Earrings" checked="checked">
+              <label class="form-checkbox__text" for="earrings">Earrings</label>
+            </div>
+          </div>
+        </div>
+        <div class="filter__item">
+          <h3>Material</h3>
+          <div class="filter__content filter__content--toggle">
+            <div class="form-checkbox">
+              <input class="form-checkbox__control" type="checkbox" name="color" id="gold" value="Gold">
+              <label class="form-checkbox__text" for="gold">Gold</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="form-checkbox__control" type="checkbox" name="color" id="silver" value="Silver" checked="checked">
+              <label class="form-checkbox__text" for="silver">Silver</label>
+            </div>
+          </div>
+        </div>
+        <div class="filter__item">
+          <h3>Collection</h3>
+          <div class="filter__content filter__content--toggle">
+            <div class="form-checkbox">
+              <input class="form-checkbox__control" type="checkbox" name="color" id="pink-flamingo" value="Pink flamingo" checked="checked">
+              <label class="form-checkbox__text" for="pink-flamingo">Pink flamingo</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="form-checkbox__control" type="checkbox" name="color" id="dreams" value="Dreams" checked="checked">
+              <label class="form-checkbox__text" for="dreams">Dreams</label>
+            </div>
+          </div>
+        </div>
+        <div class="filter__item">
+          <h3>Price</h3>
+          <div class="filter__content filter__content--toggle">
+
+            <div class="form-slider">
+              <div class="form-slider__info">
+                <div class="form-slider__info--inverse left"></div>
+                <div class="form-slider__info--inverse right"></div>
+                <div class="form-slider__info--range"></div>
+                <span class="form-slider__info--thumb thumb-left"></span>
+                <span class="form-slider__info--thumb thumb-right"></span>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+      <button class="button">Apply</button>
+      <button class="button button--white ">Clear All</button>
     </div>
+
+    <div>
+      <div class="catalog__list">
+        <a class="new-product__item" href="#">
+          <img src="./img/purple-gemstone-necklace@1x.jpg" srcset="./img/purple-gemstone-necklace@2x.jpg 2x" width="270" height="284" alt="Necklace with amethyst">
+          <h3>Double pearl earrings </h3>
+          <strong>$ 115</strong>
+        </a>
+        <a class="new-product__item" href="#">
+          <img src="./img/layered-choker-necklace@1x.jpg" srcset="./img/layered-choker-necklace@2x.jpg 2x" width="270" height="284" alt="Layered сhoker">
+          <h3>Choker with gold bead</h3>
+          <strong>$ 55</strong>
+        </a>
+        <a class="new-product__item" href="#">
+          <img src="./img/dainty-gold-necklace@1x.jpg" srcset="./img/dainty-gold-necklace@2x.jpg 2x" width="270" height="284" alt="Gold chain">
+          <h3>Gold layered necklace</h3>
+          <strong>$ 155</strong>
+        </a>
+        <a class="new-product__item" href="#">
+          <img src="./img/galaxy-earrings@1x.jpg" srcset="./img/galaxy-earrings@2x.jpg 2x" width="270" height="284" alt="Galaxy earrings">
+          <h3>Blue gemstone pendant</h3>
+          <strong>$ 105</strong>
+        </a>
+        <a class="new-product__item" href="#">
+          <img src="./img/galaxy-earrings@1x.jpg" srcset="./img/galaxy-earrings@2x.jpg 2x" width="270" height="284" alt="Galaxy earrings">
+          <h3>Boho earrings</h3>
+          <strong>$ 75</strong>
+        </a>
+        <a class="new-product__item" href="#">
+          <img src="./img/galaxy-earrings@1x.jpg" srcset="./img/galaxy-earrings@2x.jpg 2x" width="270" height="284" alt="Galaxy earrings">
+          <h3>Gold bird necklace</h3>
+          <strong>$ 135</strong>
+        </a>
+        <a class="new-product__item" href="#">
+          <img src="./img/galaxy-earrings@1x.jpg" srcset="./img/galaxy-earrings@2x.jpg 2x" width="270" height="284" alt="Galaxy earrings">
+          <h3>Black leather choker</h3>
+          <strong>$ 85</strong>
+        </a>
+        <a class="new-product__item" href="#">
+          <img src="./img/galaxy-earrings@1x.jpg" srcset="./img/galaxy-earrings@2x.jpg 2x" width="270" height="284" alt="Galaxy earrings">
+          <h3>Necklace with amethyst</h3>
+          <strong>$ 145</strong>
+        </a>
+        <a class="new-product__item" href="#">
+          <img src="./img/galaxy-earrings@1x.jpg" srcset="./img/galaxy-earrings@2x.jpg 2x" width="270" height="284" alt="Galaxy earrings">
+          <h3>Elephant earrings</h3>
+          <strong>$ 95</strong>
+        </a>
+        <a class="new-product__item" href="#">
+          <img src="./img/galaxy-earrings@1x.jpg" srcset="./img/galaxy-earrings@2x.jpg 2x" width="270" height="284" alt="Galaxy earrings">
+          <h3>Threader necklace</h3>
+          <strong>$ 115</strong>
+        </a>
+        <a class="new-product__item" href="#">
+          <img src="./img/galaxy-earrings@1x.jpg" srcset="./img/galaxy-earrings@2x.jpg 2x" width="270" height="284" alt="Galaxy earrings">
+          <h3>Origami crane necklace</h3>
+          <strong>$ 105</strong>
+        </a>
+        <a class="new-product__item" href="#">
+          <img src="./img/galaxy-earrings@1x.jpg" srcset="./img/galaxy-earrings@2x.jpg 2x" width="270" height="284" alt="Galaxy earrings">
+          <h3>Marble earrings</h3>
+          <strong>$ 95</strong>
+        </a>
+      </div>
+
+      <div class="pagination">
+        <a href="#" aria-label="Previous">Previous</a>
+        <nav class="pagination__nav">
+          <a href="#" aria-label="page number 1">1</a>
+          <a href="#" aria-label="page number 2">2</a>
+          <a href="#" aria-label="page number 3">3</a>
+          <a href="#" aria-label="page number 4">4</a>
+          <a href="#" aria-label="page number 5">5</a>
+        </nav>
+        <a href="#" aria-label="Next">Next</a>
+      </div>
+    </div>
+
   </section>
 </main>
+
+<script src="./js/main.js"></script>
 </body>
 </html>
