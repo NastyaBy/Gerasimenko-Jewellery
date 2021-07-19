@@ -4,14 +4,17 @@
 .form-checkbox {
   display: flex;
   align-items: center;
-  margin-right: 30px;
-  margin-bottom: 10px;
+  margin: 0 0 12px;
   font-family: $general-font;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
   color: $basic-text;
+
+  &:last-child {
+    margin: 0;
+  }
 }
 
 .form-checkbox--modal {
