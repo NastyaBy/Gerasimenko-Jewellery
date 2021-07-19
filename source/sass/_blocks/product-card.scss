@@ -47,7 +47,6 @@
     height: 129px;
   }
 
-
   &--big {
     grid-column-start: 2;
     grid-column-end: 3;
@@ -69,8 +68,6 @@
       grid-template-columns: 1fr;
       grid-template-rows: 1fr;
     }
-
-
   }
 }
 
@@ -189,7 +186,5 @@ a.product-card__nav--active {
       border-right: none;
       padding-right: 0;
     }
-
-
   }
 }
