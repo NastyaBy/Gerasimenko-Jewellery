@@ -14,15 +14,19 @@
   <link rel="preload" href="./fonts/cormorant-garamond-bold.woff2" as="font" type="font/woff2">
 </head>
 
-<body>
+<body class="layout">
 
 <main>
   <section class="product-card">
     <div class="product-card__pictures">
-      <img src="./img/gold-necklace-for-women@1x.jpg" srcset="./img/gold-necklace-for-women@2x.jpg 2x" width="100" height="125" alt="Gold necklace for women">
-      <img src="./img/pretty-gold-necklace@1x.jpg" srcset="./img/pretty-gold-necklace@2x.jpg 2x" width="100" height="125" alt="Pretty gold necklace">
-      <img src="./img/womens-necklace-set@1x.jpg" srcset="./img/womens-necklace-set@2x.jpg 2x" width="100" height="125" alt="Womens necklace set">
-      <img class="product-card__pictures--big" src="./img/necklace-detail@1x.jpg" srcset="./img/necklace-detail@2x.jpg 2x" width="470" height="435" alt="Necklace detail">
+      <img class="product-card__picture-item" src="./img/gold-necklace-for-women@1x.jpg"
+           srcset="./img/gold-necklace-for-women@2x.jpg 2x" width="100" height="125" alt="Gold necklace for women">
+      <img class="product-card__picture-item" src="./img/pretty-gold-necklace@1x.jpg"
+           srcset="./img/pretty-gold-necklace@2x.jpg 2x" width="100" height="125" alt="Pretty gold necklace">
+      <img class="product-card__picture-item" src="./img/womens-necklace-set@1x.jpg"
+           srcset="./img/womens-necklace-set@2x.jpg 2x" width="100" height="125" alt="Womens necklace set">
+      <img class="product-card__picture-item product-card__picture-item--big" src="./img/necklace-detail@1x.jpg"
+           srcset="./img/necklace-detail@2x.jpg 2x" width="470" height="435" alt="Necklace detail">
     </div>
 
     <div class="product-card__description">
@@ -48,7 +52,7 @@
         </tr>
       </table>
 
-      <a class="button" href="#">Add to cart</a>
+      <a class="button js-modalOpen" href="#" data-popup-trigger="add-to-cart">Add to cart</a>
 
       <div class="product-card__offers">
         <p>14 Day Returns</p>
@@ -76,22 +80,26 @@
 
     <div class="new-product__list">
       <a class="new-product__item" href="#">
-        <img src="./img/purple-gemstone-necklace@1x.jpg" srcset="./img/purple-gemstone-necklace@2x.jpg 2x" width="270" height="284" alt="Necklace with amethyst">
+        <img src="./img/purple-gemstone-necklace@1x.jpg" srcset="./img/purple-gemstone-necklace@2x.jpg 2x" width="270"
+             height="284" alt="Necklace with amethyst">
         <h3>Necklace with amethyst</h3>
         <strong>$ 145</strong>
       </a>
       <a class="new-product__item" href="#">
-        <img src="./img/layered-choker-necklace@1x.jpg" srcset="./img/layered-choker-necklace@2x.jpg 2x" width="270" height="284" alt="Layered сhoker">
+        <img src="./img/layered-choker-necklace@1x.jpg" srcset="./img/layered-choker-necklace@2x.jpg 2x" width="270"
+             height="284" alt="Layered сhoker">
         <h3>Layered сhoker</h3>
         <strong>$ 115</strong>
       </a>
       <a class="new-product__item" href="#">
-        <img src="./img/dainty-gold-necklace@1x.jpg" srcset="./img/dainty-gold-necklace@2x.jpg 2x" width="270" height="284" alt="Gold chain">
+        <img src="./img/dainty-gold-necklace@1x.jpg" srcset="./img/dainty-gold-necklace@2x.jpg 2x" width="270"
+             height="284" alt="Gold chain">
         <h3>Gold chain</h3>
         <strong>$ 215</strong>
       </a>
       <a class="new-product__item" href="#">
-        <img src="./img/galaxy-earrings@1x.jpg" srcset="./img/galaxy-earrings@2x.jpg 2x" width="270" height="284" alt="Galaxy earrings">
+        <img src="./img/galaxy-earrings@1x.jpg" srcset="./img/galaxy-earrings@2x.jpg 2x" width="270" height="284"
+             alt="Galaxy earrings">
         <h3>Galaxy earrings</h3>
         <strong>$ 95</strong>
       </a>
@@ -155,14 +163,63 @@
 
 </main>
 
+
 <div class="modal js-modal" data-popup-modal="add-to-cart">
-  <div class="modal__inner">
-    <h1>Add to cart</h1>
+  <div class="modal__inner modal__inner--add-to-cart">
+    <div class="add-to-cart">
+      <h2>The item was added to your cart</h2>
+      <div class="add-to-cart__product">
+        <img class="add-to-cart__image" src="./img/necklace-detail@1x.jpg" srcset="./img/necklace-detail@2x.jpg 2x"
+             width="470" height="435"
+             alt="Necklace detail">
+        <div class="add-to-cart__info">
+          <h3>Gold Necklace </h3>
+          <span>$ 115</span>
+        </div>
+        <div class="add-to-cart__quantity">
+          <button>
+            <svg width="14" height="14">
+              <use xlink:href="#plus"></use>
+            </svg>
+          </button>
+          <span>1</span>
+          <button>
+            <svg width="14" height="2">
+              <use xlink:href="#minus"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="add-to-cart__summary">
+        <p>You have 1 item in the cart</p>
+        <span>Cart subtotal: $ 115</span>
+      </div>
+      <div class="add-to-cart__actions">
+        <button class="button button--white">Continue shopping</button>
+        <button class="button">Checkout</button>
+      </div>
+      <button class="modal__button-close js-modalCloseBtn" type="reset" aria-label="Close add to cart">
+        <svg width="17" height="17">
+          <use xlink:href="#close-icon"></use>
+        </svg>
+      </button>
+    </div>
+
+
   </div>
   <i class="modal__blackout js-modalBlackout"></i>
 </div>
 
 <svg style="display: none;">
+
+
+  <symbol id="plus" viewBox="0 0 14 14" fill="none">
+    <path d="M0 6.125h14v1.75H0v-1.75z" fill="#9B9997"/>
+    <path d="M6.125 14V0h1.75v14h-1.75z" fill="#9B9997"/>
+  </symbol>
+
+  <symbol id="minus" viewBox="0 0 14 2" fill="none"><path d="M0 0h14v2H0V0z" fill="#9B9997"/></symbol>
 
   <symbol id="search" viewBox="0 0 14 14" fill="none">
     <path
@@ -211,7 +268,11 @@
       fill="currentColor"/>
   </symbol>
 
-  <symbol id="close-icon" viewBox="0 0 14 14" fill="none" ><path d="M7 5.445L12.445 0 14 1.555 8.555 7 14 12.445 12.445 14 7 8.555 1.555 14 0 12.445 5.445 7 0 1.555 1.555 0 7 5.445z" fill="#1D1613"/></symbol>
+  <symbol id="close-icon" viewBox="0 0 14 14" fill="none">
+    <path
+      d="M7 5.445L12.445 0 14 1.555 8.555 7 14 12.445 12.445 14 7 8.555 1.555 14 0 12.445 5.445 7 0 1.555 1.555 0 7 5.445z"
+      fill="#1D1613"/>
+  </symbol>
 
 </svg>
 

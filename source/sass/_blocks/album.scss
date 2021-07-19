@@ -9,6 +9,7 @@
 
   @include media-tablet {
     margin: 0 45px;
+    padding-top: 13px;
   }
 
   h2 {
@@ -22,10 +23,16 @@
     line-height: 44px;
     letter-spacing: 0.03em;
 
-    &:before {
+    @include media-tablet {
+      margin-bottom: 16px;
+    }
+
+    &::before {
       content: "@";
       font-size: 42px;
     }
+
+
   }
 
   a {

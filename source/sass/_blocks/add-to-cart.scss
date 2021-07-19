@@ -1,0 +1,129 @@
+@import "../variables.scss";
+@import "../mixins/media.scss";
+
+.add-to-cart {
+  display: flex;
+  flex-direction: column;
+  padding: 47px 35px;
+  background: $basic-white;
+
+  h2 {
+    margin: 0;
+    padding-bottom: 5px;
+    font-family: $accent-font;
+    font-style: normal;
+    font-weight: bold;
+    color: $basic-text;
+    font-size: 26px;
+    line-height: 34px;
+    text-align: center;
+  }
+}
+
+
+.add-to-cart__product {
+  display: flex;
+  margin: 40px 0;
+}
+
+.add-to-cart__image {
+  width: 84px;
+  height: 79px;
+}
+
+.add-to-cart__info {
+  margin: 0 23px;
+  flex-grow: 1;
+
+  h3 {
+    margin: 0 0 8px;
+    padding: 0;
+    font-family: $accent-font;
+    font-style: normal;
+    color: $basic-text;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 23px;
+  }
+
+  span {
+    font-family: $general-font;
+    font-style: normal;
+    font-weight: normal;
+    color: $basic-text;
+    font-size: 18px;
+    line-height: 23px;
+  }
+}
+
+.add-to-cart__summary {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0 40px;
+  text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    width: 100%;
+    border-top: 1px solid $border-top-modal-color;
+    transform: translate(-50%, 0);
+  }
+
+  p {
+    margin: 0;
+    color: $basic-text;
+    font-family: $general-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px
+  }
+
+  span {
+    color: $basic-text;
+    font-family: $general-font;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.add-to-cart__quantity {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  button {
+    border: none;
+    cursor: pointer;
+    font-size: 0;
+    line-height: 0;
+    text-align: center;
+    background: transparent;
+  }
+
+  span {
+    margin: 20px 0;
+    font-family: $general-font;
+    font-style: normal;
+    font-weight: normal;
+    color: $basic-text;
+    font-size: 18px;
+    line-height: 23px;
+  }
+}
+
+.add-to-cart__actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+
+  button {
+    white-space: nowrap;
+    padding: 28px 23px;
+  }
+}

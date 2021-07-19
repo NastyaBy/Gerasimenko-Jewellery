@@ -10,6 +10,7 @@
 
   @include media-tablet {
     margin: 0 45px;
+    padding-top: 35px;
   }
 
   h2 {
@@ -21,6 +22,10 @@
     font-size: 34px;
     line-height: 44px;
     letter-spacing: 0.03em;
+
+    @include media-tablet {
+      margin: 0 0 16px;
+    }
   }
 
   a {
@@ -70,6 +75,11 @@
     display: block;
     width: 285px;
     height: 300px;
+
+    @include media-tablet {
+      width: 339px;
+      height: 300px;
+    }
   }
 }
 
@@ -139,13 +149,16 @@
       height: 300px;
     }
   }
-
-
 }
+
 .blog__item--large > .blog__info {
   position: absolute;
   top: calc(50% + 13px);
   right: 0;
   bottom: 0;
   left: 50%;
+
+  @include media-tablet {
+    position: static;
+  }
 }

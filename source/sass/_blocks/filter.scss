@@ -22,11 +22,11 @@
   border: 1px solid $accent-color;
 
   &:nth-child(n+1) {
-    border-bottom: none ;
+    border-bottom: none;
   }
 
   &:last-child {
-    border-bottom:1px solid $accent-color;
+    border-bottom: 1px solid $accent-color;
   }
 
   h3 {

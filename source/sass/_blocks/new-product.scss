@@ -17,6 +17,11 @@
     font-weight: bold;
     font-size: 34px;
     line-height: 130%;
+
+    @include media-tablet {
+      margin: 0;
+    }
+
   }
 
   a {
@@ -39,6 +44,7 @@
 
   @include media-tablet {
     grid-template-columns: 1fr 1fr;
+    margin: 55px auto 10px;
   }
 
   a {
@@ -90,6 +96,10 @@
   display: flex;
   justify-content: space-between;
   margin: -18px 0 9px;
+
+  @include media-tablet {
+    margin: -6px 0 5px;
+  }
 
   a {
     border: none;
