@@ -33,11 +33,11 @@
     </a>
     <div class="header__info">
       <a class="header__link--login js-modalOpen" data-popup-trigger="login" href="#" aria-label="Login">Login</a>
-      <a class="header__link--card" href="#" aria-label="Card">
+      <a class="header__link--cart" href="#" aria-label="Cart">
         <svg width="20" height="18">
-          <use xlink:href="#card"></use>
+          <use xlink:href="#cart"></use>
         </svg>
-        Card 0</a>
+        Cart 0</a>
     </div>
   </div>
   <nav class="header-nav">
@@ -51,7 +51,7 @@
     <a class="header-nav__link header-nav__link--additional" href="#" aria-label="Stores & Hours">Stores & Hours</a>
     <a class="header-nav__link header-nav__link--additional" href="#" aria-label="Contact Us">Contact Us</a>
 
-    <a class="header-nav__link js-modalOpen" href="#" data-popup-trigger="login"  aria-label="Login">Login</a>
+    <a class="header-nav__link header-nav__link--tablet js-modalOpen" href="#" data-popup-trigger="login"  aria-label="Login">Login</a>
   </nav>
 </header>
 
@@ -64,7 +64,6 @@
 
   <section class="new-product">
     <h2>New In</h2>
-    <a href="./catalog.html" aria-label="Shop Now">Shop Now</a>
     <div class="new-product__button-nav">
       <a href="#" aria-label="Back">
         <svg width="29" height="9">
@@ -77,6 +76,7 @@
         </svg>
       </a>
     </div>
+    <a href="./catalog.html" aria-label="Shop Now">Shop Now</a>
 
     <div class="new-product__list">
       <a class="new-product__item" href="./product-card.html">
@@ -150,7 +150,7 @@
       <!--        <strong>$ 95</strong>-->
       <!--      </a>-->
     </div>
-    <nav class="new-product__nav">
+    <nav class="new-product__pagination">
       <a class="new-product__link--active"  href="#" aria-label="page number 1">1</a>
       <a href="#" aria-label="page number 2">2</a>
       <a href="#" aria-label="page number 3">3</a>
@@ -217,7 +217,7 @@
   </section>
 
   <section class="album">
-    <h2>@Chjewellery</h2>
+    <h2>Chjewellery</h2>
     <a href="#" aria-label="Follow Us">Follow Us</a>
     <div class="album__list">
       <img src="./img/8-inst-1@1x.jpg" srcset="./img/8-inst-1@2x.jpg 2x" width="230" height="230" alt="8-inst-1">
@@ -285,7 +285,7 @@
       <ul class="social">
         <li>
           <a href="#" aria-label="Facebook">
-            <svg width="8" height="15">
+            <svg width="15" height="15">
               <use xlink:href="#icon-facebook"></use>
             </svg>
             Facebook
@@ -297,12 +297,12 @@
           </svg>
           Instagram</a></li>
         <li><a href="#" aria-label="Pinterest">
-          <svg width="16" height="15">
+          <svg width="15" height="15">
             <use xlink:href="#icon-pinterest"></use>
           </svg>
           Pinterest</a></li>
         <li><a href="#" aria-label="Twitter">
-          <svg width="15" height="13">
+          <svg width="15" height="15">
             <use xlink:href="#icon-twitter"></use>
           </svg>
           Twitter</a></li>
@@ -349,7 +349,7 @@
       fill="currentColor"/>
   </symbol>
 
-  <symbol id="card" viewBox="0 0 20 18" fill="none">
+  <symbol id="cart" viewBox="0 0 20 18" fill="none">
     <path d="M14 5a4 4 0 11-8 0M1 1h18v16H1V1z" stroke="#1D1613" stroke-width="2" stroke-linecap="round"
           stroke-linejoin="round"/>
   </symbol>
@@ -358,11 +358,11 @@
     <path d="M0 5.5h29m0 0L23.514 1M29 5.5L23.514 10" stroke="#FFFFFF"/>
   </symbol>
 
-  <symbol id="arrow-forward" viewBox="0 0 30 11" fill="none">
+  <symbol id="arrow-forward" viewBox="0 0 29 9" fill="none">
     <path d="M0 5.5h29m0 0L23.514 1M29 5.5L23.514 10" stroke="#A87B62"/>
   </symbol>
 
-  <symbol id="arrow-back" viewBox="0 0 30 11" fill="none">
+  <symbol id="arrow-back" viewBox="0 0 29 9" fill="none">
     <path d="M30 5.5H1m0 0L6.486 10M1 5.5L6.486 1" stroke="#A87B62"/>
   </symbol>
 

@@ -5,10 +5,17 @@
   flex-grow: 1;
 
   input {
+    width: 100%;
     margin: 0;
-    padding: 15px 0;
+    padding: 12px 0 8px;
     background-color: transparent;
+    font-family: $general-font;
+    color: $basic-white;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
     border: none;
+
   }
 
   &--modal {

@@ -5,6 +5,10 @@
   display: flex;
   flex-direction: column;
   font-family: $general-font;
+
+  button {
+    margin-bottom: 25px;
+  }
 }
 
 .filter__catalog {
@@ -46,8 +50,4 @@
 h3.active-filter + .filter__content--toggle {
   max-height: 500px;
   padding: 14px 20px 16px 0;
-}
-
-.button {
-  margin-bottom: 25px;
 }

@@ -26,6 +26,8 @@
 }
 
 .layout__header {
+  overflow: hidden;
+
   @include media-tablet {
     position: absolute;
     top: 0;

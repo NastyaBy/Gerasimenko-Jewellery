@@ -2,10 +2,13 @@
 @import "../mixins/media.scss";
 
 .header {
+  position: relative;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   max-width: 1180px;
   margin: 0 auto;
+  padding: 41px 45px 51px;
 
   @include media-tablet {
     display: grid;
@@ -16,8 +19,10 @@
 }
 
 .header__logo {
-  margin: 0 auto;
-  padding: 30px 0 19px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
   width: 66px;
   height: 66px;
 
@@ -35,6 +40,7 @@
   justify-content: flex-end;
   align-items: flex-start;
   flex-wrap: wrap;
+  margin-right: 6px;
 
   @include media-tablet {
     grid-column-start: 3;
@@ -44,15 +50,17 @@
   }
 
   a {
-    margin-left: 35px;
+    margin-left: 36px;
     align-items: center;
     font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
     color: $basic-text;
     text-decoration: none;
   }
 }
 
-.header__link--card {
+.header__link--cart {
   text-align: center;
 
   @include media-tablet {
@@ -79,27 +87,20 @@
 }
 
 .header-nav {
-
   position: relative;
-  display: block;
   max-width: 1180px;
   margin: 20px auto;
+  padding: 0 45px;
   text-align: center;
 
   @include media-tablet {
-    //display: none;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     flex-wrap: nowrap;
     margin: 0;
-    padding: 231px 45px 0;
+    padding: 0 45px;
     text-align: start;
     overflow: auto;
     background: $accent-color;
@@ -116,32 +117,50 @@
   }
 
   a {
-    margin: 0 35px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    color: $basic-text;
-    text-decoration: none;
+
+  }
+}
+
+.header-nav__link {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 17px;
+  font-family: $general-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: $basic-text;
+  text-decoration: none;
+
+  @include media-tablet {
+    margin: 0;
+    padding: 10px 0;
+    font-size: 24px;
+    line-height: 36px;
+    color: $basic-white;
+  }
+
+  &--tablet {
+    display: none;
 
     @include media-tablet {
-      margin: 0;
-      padding: 10px 0;
-      font-size: 24px;
-      line-height: 36px;
-      color: $basic-white;
+      display: block;
+    }
+  }
+
+  &--additional {
+    display: none;
+
+    @include media-tablet {
+      display: block;
+      font-size: 18px;
+      line-height: 23px;
+      color: $header-nav-link-additional;
     }
   }
 }
 
-a.header-nav__link--additional {
-  display: none;
-
-  @include media-tablet {
-    display: block;
-    color: $header-nav-link-additional;
-  }
-}
 
 .header-toggle {
   display: none;

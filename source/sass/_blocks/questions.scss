@@ -3,13 +3,17 @@
 
 .questions {
   margin: 0 auto;
-  padding: 75px 0 50px;
+  padding: 73px 45px 60px;
   max-width: 970px;
   color: $basic-text;
   text-align: center;
 
+  @include media-tablet {
+    margin: 0 45px;
+  }
+
   h2 {
-    margin: 0;
+    margin: 0 0 49px;
     padding: 0;
     font-family: $accent-font;
     font-style: normal;
@@ -22,9 +26,17 @@
 
 .questions__item {
   margin: 0;
-  padding: 50px 38px;
+  padding: 44px 42px 32px;
   text-align: start;
   border: 1px solid $accent-color;
+
+  &:nth-child(n+1) {
+    border-bottom: none ;
+  }
+
+  &:last-child {
+    border-bottom:1px solid $accent-color;
+  }
 
   h3 {
     margin: 0;
@@ -63,5 +75,6 @@
 
 h3.active + .questions__content--toggle {
   max-height: 500px;
-  padding: 14px 20px 16px 0;
+  margin: 0;
+  padding: 7px 20px 7px 7px;
 }

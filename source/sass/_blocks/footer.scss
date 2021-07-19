@@ -5,10 +5,10 @@
   display: grid;
   grid-template-columns: minmax(500px, 1fr) 1fr 1fr;
   column-gap: 75px;
-  max-width: 1175px;
+  max-width: 1170px;
   width: 100%;
   margin: 0 auto;
-  padding: 100px 0;
+  padding: 90px 45px 60px;
 
   @include media-tablet {
     grid-template-columns: 2fr 1fr;
@@ -52,13 +52,14 @@
 
 .footer-nav {
   display: grid;
+  gap: 9px;
   align-content: start;
   margin: 0;
   padding: 0;
   list-style: none;
 
   li {
-    padding: 13px;
+    padding: 6px 17px;
 
     a {
       color: $basic-white;

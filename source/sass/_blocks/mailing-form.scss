@@ -4,40 +4,41 @@
 .mailing-form {
   h2 {
     margin: 0;
-    padding: 0 0 25px;
+    padding: 0 0 9px;
     font-family: $accent-font;
     font-style: normal;
     font-weight: bold;
     font-size: 34px;
     line-height: 44px;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.025em;
   }
 
   p {
+    font-family: $general-font;
     margin: 0;
-    padding: 0;
+    padding: 0 0 32px;
     color: $mailing-form-text;
   }
 
   button {
     position: relative;
-    max-width: 103px;
-    width: 100%;
+    display: flex;
     margin: 0;
-    padding: 0;
+    padding: 0 0 0 10px;
     color: $basic-white;
     font-family: $general-font;
     font-weight: 500;
     font-size: 16px;
     line-height: 21px;
+    align-items: center;
+    white-space: nowrap;
     background: none;
     border: none;
+    cursor: pointer;
 
     svg {
-      position: absolute;
-      top: 50%;
-
-      color: $basic-white;
+      flex-shrink: 0;
+      margin-left: 11px;
     }
   }
 }

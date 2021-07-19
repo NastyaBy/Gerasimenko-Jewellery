@@ -24,12 +24,15 @@
       <img class="product-card__pictures--big" src="./img/necklace-detail@1x.jpg" srcset="./img/necklace-detail@2x.jpg 2x" width="470" height="435" alt="Necklace detail">
     </div>
 
-    <div>
+    <div class="product-card__description">
       <h2>Gold Necklace </h2>
       <strong>$ 115</strong>
-      <a href="#">Description</a>
-      <a href="#">Additional info</a>
-      <table>
+      <nav class="product-card__nav">
+        <a class="product-card__nav--active" href="#">Description</a>
+        <a href="#">Additional info</a>
+      </nav>
+
+      <table class="product-card__table">
         <tr>
           <th>Metal type</th>
           <td>Gold 585</td>
@@ -45,7 +48,8 @@
       </table>
 
       <a class="button" href="#">Add to cart</a>
-      <div>
+
+      <div class="product-card__offers">
         <p>14 Day Returns</p>
         <p>2-Year Warranty</p>
         <p>Free Shipping</p>

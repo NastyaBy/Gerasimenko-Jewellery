@@ -2,13 +2,18 @@
 @import "../mixins/media.scss";
 
 .blog {
+  max-width: 1170px;
   margin: 0 auto;
-  max-width: 1180px;
+  padding: 85px 45px 50px;
   text-align: center;
   overflow: hidden;
 
+  @include media-tablet {
+    margin: 0 45px;
+  }
+
   h2 {
-    margin: 0 0 23px;
+    margin: 0 0 19px;
     padding: 0;
     font-family: $accent-font;
     font-style: normal;
@@ -19,10 +24,12 @@
   }
 
   a {
+    display: inline-block;
+    vertical-align: top;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
-    line-height: 21px;
+    line-height: 26px;
     color: $basic-text;
     text-decoration: none;
     border-bottom: 1px solid $accent-color;
@@ -31,11 +38,16 @@
 
 .blog__list {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: min-content min-content;
   grid-auto-flow: column;
   gap: 30px;
-  margin: 60px auto 0;
+  margin: 60px 0 0;
+
+  @include media-tablet {
+    grid-auto-flow: row;
+    grid-template-columns: 1fr;
+  }
 }
 
 .blog__item {
@@ -44,6 +56,14 @@
 
   &:nth-child(2n) {
     flex-direction: row-reverse;
+
+    @include media-mobile {
+      flex-direction: column;
+    }
+  }
+
+  @include media-mobile {
+    flex-direction: column;
   }
 
   img {
@@ -54,11 +74,14 @@
 }
 
 .blog__info {
-  padding: 70px 60px;
+  padding: 66px 60px;
+  background: $background-blog-item;
 
   p {
     margin: 0;
     padding: 0;
+    font-family: $general-font;
+    white-space: nowrap;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -67,25 +90,62 @@
   }
 
   h3 {
+    margin: 13px 0 34px;
     font-family: $accent-font;
     font-style: normal;
     font-weight: 600;
     font-size: 26px;
     line-height: 34px;
+    color: $basic-dark;
   }
 
   a {
+    display: inline-block;
+    vertical-align: top;
+    font-family: $general-font;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
-    line-height: 21px;
+    line-height: 28px;
     color: $basic-text;
   }
 }
 
 .blog__item--large {
+  position: relative;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+
+
+  @include media-tablet {
+    grid-row-start: auto;
+    grid-row-end: auto;
+    grid-column-start: auto;
+    grid-column-end: auto;
+  }
+
+  @include media-mobile {
+    flex-direction: column;
+  }
+
   img {
     width: 570px;
     height: 630px;
+
+    @include media-tablet {
+      width: 285px;
+      height: 300px;
+    }
   }
+
+
+}
+.blog__item--large > .blog__info {
+  position: absolute;
+  top: calc(50% + 13px);
+  right: 0;
+  bottom: 0;
+  left: 50%;
 }

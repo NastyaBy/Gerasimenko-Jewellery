@@ -2,15 +2,15 @@
 @import "../mixins/media.scss";
 
 .new-product {
-  padding: 130px 0 30px;
+  max-width: 1170px;
+  padding: 120px 45px 30px;
   margin: 0 auto;
-  max-width: 1180px;
   text-align: center;
   overflow: hidden;
 
 
   h2 {
-    margin: 0 0 23px;
+    margin: 0 0 11px;
     padding: 0;
     font-family: $accent-font;
     font-style: normal;
@@ -35,7 +35,7 @@
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 30px;
-  margin: 60px auto 0;
+  margin: 60px auto 21px;
 
   @include media-tablet {
     grid-template-columns: 1fr 1fr;
@@ -68,7 +68,7 @@
   }
 
   h3 {
-    margin: 25px 0 15px;
+    margin: 17px 0 4px;
     padding: 0;
     font-family: $general-font;
     font-style: normal;
@@ -87,13 +87,18 @@
 }
 
 .new-product__button-nav {
+  display: flex;
+  justify-content: space-between;
+  margin: -18px 0 9px;
+
   a {
     border: none;
   }
 }
 
-.new-product__nav {
+.new-product__pagination {
   a {
+    padding: 5px;
     color: $mailing-form-text;
     border: none;
   }
