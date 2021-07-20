@@ -43,6 +43,11 @@
     color: $basic-text;
     text-decoration: none;
     border-bottom: 1px solid $accent-color;
+    cursor: pointer;
+
+    &:hover {
+      border-bottom-color: transparent;
+    }
   }
 }
 

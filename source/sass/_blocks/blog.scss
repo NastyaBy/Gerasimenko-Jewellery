@@ -38,6 +38,11 @@
     color: $basic-text;
     text-decoration: none;
     border-bottom: 1px solid $accent-color;
+    cursor: pointer;
+
+    &:hover {
+      border-bottom-color: transparent;
+    }
   }
 }
 
@@ -100,7 +105,7 @@
   }
 
   h3 {
-    margin: 13px 0 34px;
+    margin: 13px 0 35px;
     font-family: $accent-font;
     font-style: normal;
     font-weight: 600;
@@ -113,7 +118,6 @@
     display: inline-block;
     vertical-align: top;
     font-family: $general-font;
-    font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 28px;
@@ -153,7 +157,7 @@
 
 .blog__item--large > .blog__info {
   position: absolute;
-  top: calc(50% + 13px);
+  top: calc(50% + 16px);
   right: 0;
   bottom: 0;
   left: 50%;

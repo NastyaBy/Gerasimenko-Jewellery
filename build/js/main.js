@@ -1,6 +1,6 @@
 'use strict';
 
-var questions = document.querySelector('.questions');
+var questions = document.querySelector('.js-questions');
 
 if (questions) {
   var accordionHeading = questions.querySelectorAll('h3');
@@ -83,3 +83,16 @@ if (modalTriggers) {
     });
   });
 }
+
+document.addEventListener( 'DOMContentLoaded', function () {
+  new Splide('.js-productSlider', {
+    focus: false,
+    perPage: 4,
+    perMove: 4,
+    autoWidth: true,
+    classes: {
+      pagination: 'new-product__pagination',
+      page: '',
+    },
+  } ).mount();
+} );

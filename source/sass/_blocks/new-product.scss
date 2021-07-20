@@ -3,11 +3,10 @@
 
 .new-product {
   max-width: 1170px;
-  padding: 120px 45px 30px;
+  padding: 120px 45px 22px;
   margin: 0 auto;
   text-align: center;
   overflow: hidden;
-
 
   h2 {
     margin: 0 0 11px;
@@ -31,18 +30,23 @@
     color: $basic-text;
     text-decoration: none;
     border-bottom: 1px solid $accent-color;
+
+    &:hover {
+      border-bottom-color: transparent;
+    }
   }
 }
 
+.new-product__track {
+  overflow: hidden;
+}
+
 .new-product__list {
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: flex;
   gap: 30px;
-  margin: 60px auto 21px;
+  margin: 60px auto 14px;
 
   @include media-tablet {
-    grid-template-columns: 1fr 1fr;
     margin: 55px auto 10px;
   }
 
@@ -94,26 +98,61 @@
 .new-product__button-nav {
   display: flex;
   justify-content: space-between;
-  margin: -18px 0 9px;
+  margin: -13px 0 10px;
 
   @include media-tablet {
     margin: -6px 0 5px;
   }
 
-  a {
+  button {
+    margin: 0;
+    padding: 0;
     border: none;
+    background: none;
+    cursor: pointer;
+
+    &:disabled {
+      opacity: 0.2;
+      cursor: default;
+    }
   }
 }
 
 .new-product__pagination {
-  a {
-    padding: 5px;
-    color: $mailing-form-text;
-    border: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: pagination;
+
+  li {
+    margin: 0 2px;
+    padding: 0;
   }
-}
 
+  button {
+    margin: 0;
+    padding: 5px;
+    font-family: $general-font;
+    color: $mailing-form-text;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    background: none;
+    cursor: pointer;
 
-a.new-product__link--active {
-  color: $basic-text;
+    &::before {
+      counter-increment: pagination;
+      content: counter(pagination);
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &.is-active {
+      color: $basic-text;
+    }
+  }
 }

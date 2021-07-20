@@ -57,6 +57,10 @@
     line-height: 21px;
     color: $basic-text;
     text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -128,6 +132,10 @@
   line-height: 24px;
   color: $basic-text;
   text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 
   @include media-tablet {
     margin: 0;

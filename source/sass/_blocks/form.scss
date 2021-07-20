@@ -2,12 +2,13 @@
 @import "../mixins/media.scss";
 
 .form {
-  width: 430px;
+  width: 340px;
   display: flex;
   flex-direction: column;
-  padding: 45px 60px;
+  padding: 50px 45px;
 
   h2 {
+    margin: 0 0 20px;
     font-family: $accent-font;
     font-style: normal;
     font-weight: bold;
@@ -18,7 +19,8 @@
   }
 
   a {
-    padding: 10px 0 50px;
+    align-self: flex-end;
+    margin: 4px 0 46px;
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
@@ -26,17 +28,21 @@
     text-align: end;
     color: $mailing-form-text;
     text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
 .form__sign-up {
   display: flex;
   justify-content: center;
-  padding-top: 10px;
+  padding-top: 14px;
 
   p {
     margin: 0;
-    padding: 0 5px 0 0;
+    padding: 0 6px 0 0;
     color: $mailing-form-text;
     font-style: normal;
     font-weight: 500;
@@ -45,7 +51,8 @@
   }
 
   a {
-    padding: 0;
+    margin: 0;
+    padding: 0 8px 0 3px;
     color: $basic-text;
     font-style: normal;
     font-weight: 500;
