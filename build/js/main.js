@@ -89,10 +89,18 @@ document.addEventListener( 'DOMContentLoaded', function () {
     focus: false,
     perPage: 4,
     perMove: 4,
-    autoWidth: true,
+    gap: '30px',
+    drag: false,
     classes: {
       pagination: 'new-product__pagination',
       page: '',
     },
+    breakpoints: {
+      1023: {
+        perPage: 2,
+        perMove: 2,
+        drag: true,
+      },
+    }
   } ).mount();
 } );

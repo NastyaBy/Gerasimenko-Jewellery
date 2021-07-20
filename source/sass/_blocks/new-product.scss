@@ -8,6 +8,15 @@
   text-align: center;
   overflow: hidden;
 
+  @include media-tablet {
+    margin: 0 45px;
+    padding: 120px 0 22px;
+  }
+
+  @include media-mobile {
+    margin: 0 15px;
+  }
+
   h2 {
     margin: 0 0 11px;
     padding: 0;
@@ -43,7 +52,6 @@
 
 .new-product__list {
   display: flex;
-  gap: 30px;
   margin: 60px auto 14px;
 
   @include media-tablet {
@@ -56,24 +64,17 @@
 }
 
 .new-product__item {
+  flex-shrink: 0;
   padding-bottom: 30px;
   text-align: center;
   color: $basic-text;
   text-decoration: none;
+  user-select: none;
 
   img {
-    width: 270px;
-    height: 284px;
-
-    @include media-tablet {
-      width: 324px;
-      height: 340px;
-    }
-
-    @include media-mobile {
-      width: 130px;
-      height: 136px;
-    }
+    display: block;
+    width: 100%;
+    height: auto;
   }
 
   h3 {
@@ -104,6 +105,10 @@
     margin: -6px 0 5px;
   }
 
+  @include media-mobile {
+    display: none;
+  }
+
   button {
     margin: 0;
     padding: 0;
@@ -127,32 +132,73 @@
   counter-reset: pagination;
 
   li {
-    margin: 0 2px;
+    margin: 0;
     padding: 0;
   }
 
-  button {
-    margin: 0;
-    padding: 5px;
-    font-family: $general-font;
-    color: $mailing-form-text;
-    font-size: 16px;
-    font-weight: 500;
-    border: none;
-    background: none;
-    cursor: pointer;
-
-    &::before {
-      counter-increment: pagination;
-      content: counter(pagination);
-    }
-
-    &:hover {
-      text-decoration: underline;
-    }
-
-    &.is-active {
+  li:last-child button {
+    @include media-mobile {
       color: $basic-text;
+      position: unset;
+      width: unset;
+      height: unset;
+      margin: unset;
+      visibility: unset;
     }
+  }
+
+  li:last-child button.is-active::after {
+    @include media-mobile {
+      content: "  of  " counter(pagination);
+    }
+  }
+}
+
+.new-product__pagination button {
+  margin: 0 2px;
+  padding: 5px;
+  font-family: $general-font;
+  color: $mailing-form-text;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  &::before {
+    counter-increment: pagination;
+    content: counter(pagination);
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &.is-active {
+    color: $basic-text;
+
+    @include media-mobile {
+      position: unset;
+      width: unset;
+      height: unset;
+      margin: unset;
+      visibility: unset;
+    }
+  }
+
+  &.is-active.is-active.is-active::after {
+    @include media-mobile {
+      content: "  of";
+      white-space: pre;
+    }
+  }
+
+  @include media-mobile {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    visibility: hidden;
+    pointer-events: none;
   }
 }

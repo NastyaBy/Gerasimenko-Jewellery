@@ -13,7 +13,47 @@
   <link rel="preload" href="./fonts/cormorant-garamond-bold.woff2" as="font" type="font/woff2">
 </head>
 
-<body>
+<body class="layout">
+
+<header class="layout__header">
+  <div class="header ">
+    <button class="header-toggle" type="button" aria-label="Menu button"></button>
+    <form class="search">
+      <button type="submit">
+        <svg width="14" height="14">
+          <use xlink:href="#search"></use>
+        </svg>
+      </button>
+      <label class="visually-hidden" for="search-header">Search</label>
+      <input type="search" placeholder="Type here to search" id="search-header"/>
+    </form>
+    <a class="header__logo" href="index.html" aria-label="logotype Jewellery" >
+      <img src="./img/logo.svg" alt="logotype Jewellery" width="66" height="66">
+    </a>
+    <div class="header__info">
+      <a class="header__link--login js-modalOpen" data-popup-trigger="login" href="#" aria-label="Login">Login</a>
+      <a class="header__link--cart" href="#" aria-label="Cart">
+        <svg width="20" height="18">
+          <use xlink:href="#cart"></use>
+        </svg>
+        Cart 0</a>
+    </div>
+  </div>
+  <nav class="header-nav">
+    <a class="header-nav__link" href="#" aria-label="What’s new">What’s new</a>
+    <a class="header-nav__link" href="#" aria-label="Chokers">Chokers</a>
+    <a class="header-nav__link" href="#" aria-label="Necklaces">Necklaces</a>
+    <a class="header-nav__link" href="#" aria-label="Rings">Rings</a>
+    <a class="header-nav__link" href="#" aria-label="Earrings">Earrings</a>
+
+    <a class="header-nav__link header-nav__link--additional" href="#" aria-label="About CH">About CH</a>
+    <a class="header-nav__link header-nav__link--additional" href="#" aria-label="Stores & Hours">Stores & Hours</a>
+    <a class="header-nav__link header-nav__link--additional" href="#" aria-label="Contact Us">Contact Us</a>
+
+    <a class="header-nav__link header-nav__link--tablet js-modalOpen" href="#" data-popup-trigger="login" aria-label="Login">Login</a>
+  </nav>
+</header>
+
 <main class="layout__main">
   <h1 class="visually-hidden">Jewellery Catalog</h1>
   <section class="intro intro--catalog">
@@ -173,6 +213,115 @@
 
   </section>
 </main>
+
+<footer class="layout__footer">
+  <div class="footer">
+    <div class="footer__col footer__col--mailing-form">
+      <form class="mailing-form">
+        <h2>The good stuff in your inbox </h2>
+        <p>News and updates from CH. No spam, we promise.</p>
+        <div class="mailing-form__row">
+          <div class="form-input">
+            <label class="visually-hidden" for="your-email">Your e-mail</label>
+            <input id="your-email" type="text" placeholder="Your E-mail"/>
+          </div>
+          <button type="submit">Sign Up
+            <svg width="30" height="11">
+              <use xlink:href="#arrow-send"></use>
+            </svg>
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="footer__col footer__col--section">
+      <ul class="footer-nav">
+        <li>
+          <a href="#" aria-label="Ordering & Payment">Ordering & Payment</a>
+        </li>
+        <li>
+          <a href="#" aria-label="Terms & Conditions">Terms & Conditions</a>
+        </li>
+        <li>
+          <a href="#" aria-label="Returns & Exchanges">Returns & Exchanges</a>
+        </li>
+        <li>
+          <a href="#" aria-label="Delivery">Delivery</a>
+        </li>
+      </ul>
+      <ul class="footer-nav">
+        <li>
+          <a href="#" aria-label="About CH">About CH</a>
+        </li>
+        <li>
+          <a href="#" aria-label="Stores & Hours">Stores & Hours</a>
+        </li>
+        <li>
+          <a href="#" aria-label="Jobs">Jobs</a>
+        </li>
+        <li>
+          <a href="#" aria-label="Contact Us">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer__col ">
+      <ul class="social">
+        <li>
+          <a href="#" aria-label="Facebook">
+            <svg width="15" height="15">
+              <use xlink:href="#icon-facebook"></use>
+            </svg>
+            Facebook
+          </a>
+        </li>
+        <li><a href="#" aria-label="Instagram">
+          <svg width="15" height="15">
+            <use xlink:href="#icon-instagram"></use>
+          </svg>
+          Instagram</a></li>
+        <li><a href="#" aria-label="Pinterest">
+          <svg width="15" height="15">
+            <use xlink:href="#icon-pinterest"></use>
+          </svg>
+          Pinterest</a></li>
+        <li><a href="#" aria-label="Twitter">
+          <svg width="15" height="15">
+            <use xlink:href="#icon-twitter"></use>
+          </svg>
+          Twitter</a></li>
+      </ul>
+    </div>
+  </div>
+
+</footer>
+
+<div class="modal js-modal" data-popup-modal="login">
+  <div class="modal__inner modal__inner--login">
+    <img src="./img/sweet-ice-cream-photography@1x.jpg" srcset="./img/sweet-ice-cream-photography@2x.jpg 2x" width="430" height="138" alt="sweet-ice-cream-photography">
+    <form class="form js-form" name="modalForm" id="modalForm" action="https://echo.htmlacademy.ru" method="get">
+      <h2>Log In</h2>
+      <div class="form-input form-input--modal-email">
+        <label class="visually-hidden" for="e-mail">Your E-mail</label>
+        <input class="js-validateEmail" type="text" maxlength="50" id="e-mail" name="e-mail" placeholder="Your E-mail" aria-label="Your E-mail" required="">
+      </div>
+      <div class="form-input form-input--modal-password ">
+        <label class="visually-hidden" for="password">Password</label>
+        <input class="js-validatePassword" id="password" name="password" type="password" maxlength="50" placeholder="Password" aria-label="Password" required="">
+      </div>
+      <a href="#" aria-label="Forgot your password?">Forgot your password?</a>
+      <button class="button js-sendForm" type="submit" aria-label="Log In">Log In</button>
+      <div class="form__sign-up">
+        <p>Don’t have an account?</p>
+        <a href="#">Sign up</a>
+      </div>
+      <button class="modal__button-close js-modalCloseBtn" type="reset" aria-label="Close login in">
+        <svg width="17" height="17">
+          <use xlink:href="#close-icon"></use>
+        </svg>
+      </button>
+    </form>
+  </div>
+  <i class="modal__blackout js-modalBlackout"></i>
+</div>
 
 <svg style="display: none;">
   <symbol id="plus" viewBox="0 0 14 14" fill="none">

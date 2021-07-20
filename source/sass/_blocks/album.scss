@@ -4,12 +4,17 @@
 .album {
   max-width: 1170px;
   margin: 0 auto;
-  padding: 50px 45px 130px;
+  padding: 46px 45px 132px;
   text-align: center;
 
   @include media-tablet {
     margin: 0 45px;
-    padding-top: 13px;
+    padding: 13px 0 80px;
+  }
+
+  @include media-mobile {
+    margin: 0 15px;
+    padding-bottom: 71px;
   }
 
   h2 {
@@ -53,20 +58,38 @@
 
 .album__list {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1.74fr 1fr 1fr;
   grid-template-rows: min-content min-content;
   margin: 60px auto 0;
   gap: 34px 27px;
 
   @include media-tablet {
+    grid-template-columns: 1fr 1.7fr 1fr 1fr;
+    gap: 16px 20px;
+  }
+
+  @include media-mobile {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content min-content min-content;
   }
 }
 
-.album__item--big {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 3;
+.album__item {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+
+  &--big {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    height: 100%;
+  }
+
+  &--no-mobile {
+    @include media-mobile {
+      display: none;
+    }
+  }
 }

@@ -3,7 +3,7 @@
 
 .questions {
   margin: 0 auto;
-  padding: 73px 45px 60px;
+  padding: 70px 45px 60px;
   max-width: 970px;
   color: $basic-text;
   text-align: center;
@@ -11,6 +11,10 @@
   @include media-tablet {
     margin: 0 45px;
     padding: 73px 0 60px;
+  }
+
+  @include media-mobile {
+    margin: 0 15px;
   }
 
   h2 {
@@ -22,17 +26,26 @@
     font-size: 34px;
     line-height: 44px;
     letter-spacing: 0.03em;
+
+    @include media-mobile {
+      padding: 0 10px;
+      margin-bottom: 29px;
+    }
   }
 }
 
 .questions__item {
   margin: 0;
-  padding: 44px 42px 32px;
+  padding: 44px 42px 33px;
   text-align: start;
   border: 1px solid $accent-color;
 
   @include media-tablet {
     padding: 44px 50px 34px;
+  }
+
+  @include media-mobile {
+    padding: 15px 24px 18px;
   }
 
   &:nth-child(n+1) {
@@ -45,6 +58,7 @@
 
   h3 {
     margin: 0;
+    font-family: $general-font;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -52,8 +66,19 @@
     background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='10' fill='none'%3E%3Cpath d='M1 1l7.5 8L16 1' stroke='%23A87B62'/%3E%3C/svg%3E") 99% 66% no-repeat;
     cursor: pointer;
 
-    &.active {
-      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='10' fill='none'%3E%3Cpath d='M16 9L8.5 1 1 9' stroke='%23A87B62'/%3E%3C/svg%3E") 99% 59% no-repeat;
+    @include media-mobile {
+      padding-right: 55px;
+      font-size: 16px;
+      line-height: 22px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='12' fill='none'%3E%3Cpath d='M1 1l10 10L21 1' stroke='%23A87B62'/%3E%3C/svg%3E") 99% 25% no-repeat;
+    }
+  }
+
+  h3.active {
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='10' fill='none'%3E%3Cpath d='M16 9L8.5 1 1 9' stroke='%23A87B62'/%3E%3C/svg%3E") 99% 59% no-repeat;
+
+    @include media-mobile {
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='12' fill='none'%3E%3Cpath d='M21 11L11 1 1 11' stroke='%23A87B62'/%3E%3C/svg%3E") 99% 25% no-repeat;
     }
   }
 
@@ -61,10 +86,16 @@
     margin: 0;
     padding: 0;
     max-width: 525px;
+    font-family: $general-font;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 21px;
+
+    @include media-mobile {
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 }
 
@@ -86,5 +117,9 @@ h3.active + .questions__content--toggle {
 
   @include media-tablet {
     padding: 25px 0 7px 0;
+  }
+
+  @include media-mobile {
+    padding: 16px 33px 0 0;
   }
 }

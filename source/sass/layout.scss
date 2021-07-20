@@ -40,6 +40,11 @@
 .layout__main {
   flex-grow: 1;
   position: relative;
+
+
+  &--login {
+    margin: 0 auto;
+  }
 }
 
 .layout__footer {
