@@ -1490,3 +1490,25 @@
   }(U);
   window.Splide = It;
 }();
+
+// init Splide
+document.addEventListener( 'DOMContentLoaded', function () {
+  new Splide('.js-productSlider', {
+    focus: false,
+    perPage: 4,
+    perMove: 4,
+    gap: '30px',
+    drag: false,
+    classes: {
+      pagination: 'new-product__pagination',
+      page: '',
+    },
+    breakpoints: {
+      1023: {
+        perPage: 2,
+        perMove: 2,
+        drag: true,
+      },
+    }
+  } ).mount();
+} );

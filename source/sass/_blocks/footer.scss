@@ -11,14 +11,15 @@
 
   @include media-tablet {
     grid-template-columns: 2fr 1fr;
+    column-gap: 18px;
     width: unset;
-    margin: 60px 45px;
+    margin: 49px 45px;
     padding: 0;
   }
 
   @include media-mobile {
     grid-template-columns: 1fr;
-    margin: 60px 15px;
+    margin: 49px 15px;
   }
 }
 
@@ -32,10 +33,12 @@
       grid-column-end: -1;
       grid-row-start: 1;
       grid-row-end: 2;
+      margin: 0 117px 40px 0;
     }
 
     @include media-mobile {
-      margin-bottom: 50px;
+      margin-bottom: 39px;
+      margin-right: 0;
     }
   }
 
@@ -43,7 +46,7 @@
     grid-template-columns: minmax(240px, 1fr)  minmax(165px, 1fr);
 
     @include media-tablet {
-      grid-template-columns: minmax(240px, 1fr)  minmax(165px, 1fr);
+      grid-template-columns: minmax(255px, 1fr)  minmax(165px, 1fr);
     }
 
     @include media-mobile {
@@ -62,11 +65,15 @@
   list-style: none;
 
   @include media-mobile {
-    margin-bottom: 50px;
+    margin-bottom: 29px;
   }
 
   li {
     padding: 6px 17px;
+
+    @include media-tablet {
+      padding: 6px 0;
+    }
 
     @include media-mobile {
       padding: 6px 0;

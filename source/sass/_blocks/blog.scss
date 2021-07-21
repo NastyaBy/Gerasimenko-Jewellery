@@ -10,11 +10,12 @@
 
   @include media-tablet {
     margin: 0 45px;
-    padding: 35px 0 50px;
+    padding: 38px 0 50px;
   }
 
   @include media-mobile {
     margin: 0 15px;
+    padding: 26px 0 42px;
   }
 
   h2 {
@@ -56,11 +57,17 @@
   grid-template-rows: min-content min-content;
   grid-auto-flow: column;
   gap: 30px;
-  margin: 60px 0 0;
+  margin: 61px 0 0;
 
   @include media-tablet {
     grid-auto-flow: row;
     grid-template-columns: 1fr;
+    gap: 51px;
+  }
+
+  @include media-mobile {
+    gap: 41px;
+    margin-top: 53px;
   }
 }
 
@@ -86,7 +93,7 @@
     }
 
     @include media-mobile {
-      max-height: 290px;
+      max-height: 255px;
     }
   }
 }
@@ -110,7 +117,7 @@
   background: $background-blog-item;
 
   @include media-mobile {
-    min-height: 250px;
+    min-height: 215px;
   }
 
   p {
@@ -164,11 +171,15 @@
 
   img {
     max-height: 300px;
-    min-height: unset;
+    min-height: 100%;
     object-position: top;
 
+    @include media-tablet {
+      min-height: unset;
+    }
+
     @include media-mobile {
-      max-height: 290px;
+      max-height: 258px;
     }
   }
 
@@ -179,10 +190,19 @@
 
 .blog__item--large > .blog__info {
   position: absolute;
-  top: calc(50% + 16px);
+  top: calc(50% + 15px);
   right: 0;
   bottom: 0;
   left: 50%;
+
+  a {
+    margin-bottom: 37px;
+
+    @include media-tablet {
+      margin-bottom: 7px;
+    }
+  }
+
 
   @include media-tablet {
     position: static;

@@ -4,17 +4,17 @@
 .album {
   max-width: 1170px;
   margin: 0 auto;
-  padding: 46px 45px 132px;
+  padding: 46px 45px 130px;
   text-align: center;
 
   @include media-tablet {
     margin: 0 45px;
-    padding: 13px 0 80px;
+    padding: 9px 0 80px;
   }
 
   @include media-mobile {
     margin: 0 15px;
-    padding-bottom: 71px;
+    padding-bottom: 70px;
   }
 
   h2 {
@@ -71,6 +71,8 @@
   @include media-mobile {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content min-content min-content;
+    gap: 27px 23px;
+    margin: 47px auto 0;
   }
 }
 

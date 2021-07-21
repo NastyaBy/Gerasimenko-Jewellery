@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 179px 0 187px;
+  padding: 181px 0 187px;
   font-family: $accent-font;
   color: $basic-white;
   text-align: center;
@@ -36,6 +36,7 @@
   }
 
   @include media-mobile {
+    padding: 186px 0 194px;
     background: url("../img/main-mobile@1x.jpg") 50% 50% no-repeat;
 
     @include retina-size {
@@ -49,6 +50,7 @@
     margin: 0;
     padding: 0;
     font-family: $accent-font;
+    font-style: normal;
     font-weight: bold;
     font-size: 45px;
     line-height: 58px;
@@ -73,7 +75,7 @@
 
     @include media-mobile {
       font-size: 34px;
-      line-height: 44px;
+      line-height: 32px;
     }
   }
 }

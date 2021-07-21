@@ -5,12 +5,12 @@ var questions = document.querySelector('.js-questions');
 if (questions) {
   var accordionHeading = questions.querySelectorAll('h3');
   if (accordionHeading) {
-    accordionHeading.forEach(function (item) {
-      item.addEventListener('click', function () {
+    accordionHeading.forEach(function(item) {
+      item.addEventListener('click', function() {
         if (item.classList.contains('active')) {
           item.classList.remove('active');
         } else {
-          accordionHeading.forEach(function (element) {
+          accordionHeading.forEach(function(element) {
             if (element.classList.contains('active')) {
               element.classList.remove('active');
             }
@@ -28,8 +28,8 @@ if (filter) {
   var accordionFilter = filter.querySelectorAll('h3');
 
   if (accordionFilter) {
-    accordionFilter.forEach(function (item) {
-      item.addEventListener('click', function () {
+    accordionFilter.forEach(function(item) {
+      item.addEventListener('click', function() {
         item.classList.toggle('active-filter');
       });
     });
@@ -39,11 +39,36 @@ if (filter) {
 var layout = document.querySelector('.layout');
 var modalTriggers = document.querySelectorAll('.js-modalOpen');
 
+var sendForms = document.querySelectorAll('.js-sendForm');
+
+if (sendForms) {
+  sendForms.forEach(function(trigger) {
+    trigger.addEventListener('click', () => {
+      var form = trigger.closest("form")
+      var inputEmail = form.querySelector('.js-email');
+      var inputPassword = form.querySelector('.js-password');
+
+      console.log(form)
+
+      if (inputEmail && inputPassword) {
+        var obj = {
+          name: inputEmail.value,
+          tel: inputPassword.value,
+        };
+
+        var serialObj = JSON.stringify(obj);
+        localStorage.setItem('order', serialObj);
+      }
+    });
+  });
+}
+
 if (modalTriggers) {
-  modalTriggers.forEach(function (trigger) {
-    trigger.addEventListener('click', function (evt) {
+  modalTriggers.forEach(function(trigger) {
+    trigger.addEventListener('click', function(evt) {
       var popupTrigger = trigger.dataset.popupTrigger;
-      var popupModal = document.querySelector('[data-popup-modal=' + popupTrigger + ']');
+      var popupModal = document.querySelector(
+        '[data-popup-modal=' + popupTrigger + ']');
       var popupFocusInput = trigger.dataset.popupFocusInput;
       var popupFocus = popupModal.querySelector(popupFocusInput);
       var bodyBlackout = popupModal.querySelector('.js-modalBlackout');
@@ -58,19 +83,19 @@ if (modalTriggers) {
       bodyBlackout.classList.add('is-blacked-out');
       layout.classList.add('layout--no-scroll');
 
-      bodyBlackout.addEventListener('click', function () {
+      bodyBlackout.addEventListener('click', function() {
         popupModal.classList.remove('is--visible');
         bodyBlackout.classList.remove('is-blacked-out');
         layout.classList.remove('layout--no-scroll');
       });
 
-      modalCloseBtn.addEventListener('click', function () {
+      modalCloseBtn.addEventListener('click', function() {
         popupModal.classList.remove('is--visible');
         bodyBlackout.classList.remove('is-blacked-out');
         layout.classList.remove('layout--no-scroll');
       });
 
-      window.addEventListener('keydown', function (e) {
+      window.addEventListener('keydown', function(e) {
         if (e.keyCode === 27) {
           if (popupModal.classList.contains('is--visible')) {
             e.preventDefault();
@@ -84,23 +109,4 @@ if (modalTriggers) {
   });
 }
 
-document.addEventListener( 'DOMContentLoaded', function () {
-  new Splide('.js-productSlider', {
-    focus: false,
-    perPage: 4,
-    perMove: 4,
-    gap: '30px',
-    drag: false,
-    classes: {
-      pagination: 'new-product__pagination',
-      page: '',
-    },
-    breakpoints: {
-      1023: {
-        perPage: 2,
-        perMove: 2,
-        drag: true,
-      },
-    }
-  } ).mount();
-} );
+

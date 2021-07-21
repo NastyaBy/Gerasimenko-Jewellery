@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description"
-        content="Jewellery">
+        content="Jewellery"
   <meta name="keywords" content="Necklaces, Chokers, Rings, Earrings">
   <meta name="theme-color" content="#A87B62">
   <title>Jewellery</title>
@@ -32,7 +32,7 @@
       <img src="./img/logo.svg" alt="logotype Jewellery" width="66" height="66">
     </a>
     <div class="header__info">
-      <a class="header__link--login js-modalOpen" data-popup-trigger="login" href="#" aria-label="Login">Login</a>
+      <a class="header__link--login js-modalOpen" data-popup-trigger="login" data-popup-focus-input="#email" href="#" aria-label="Login">Login</a>
       <a class="header__link--cart" href="#" aria-label="Cart">
         <svg width="20" height="18">
           <use xlink:href="#cart"></use>
@@ -51,7 +51,7 @@
     <a class="header-nav__link header-nav__link--additional" href="#" aria-label="Stores & Hours">Stores & Hours</a>
     <a class="header-nav__link header-nav__link--additional" href="#" aria-label="Contact Us">Contact Us</a>
 
-    <a class="header-nav__link header-nav__link--tablet js-modalOpen" href="#" data-popup-trigger="login" aria-label="Login">Login</a>
+    <a class="header-nav__link header-nav__link--tablet js-modalOpen" href="#" data-popup-trigger="login" data-popup-focus-input="#email"  aria-label="Login">Login</a>
   </nav>
 </header>
 
@@ -155,7 +155,7 @@
         <img src="./img/jess-harper-sunday-unsplash-blog-care@1x.jpg" srcset="./img/jess-harper-sunday-unsplash-blog-care@2x.jpg 2x" width="285" height="300" alt="Jess Harper sunday unsplash blog care">
         <div class="blog__info">
           <p>September 30, 2019</p>
-          <h3>How to care for your jewellery</h3>
+          <h3>How to care for</br> your jewellery</h3>
           <a>Read Article</a>
         </div>
       </div>
@@ -163,7 +163,7 @@
         <img src="./img/alex-holyoake-unsplash-blog-power@1x.jpg" srcset="./img/alex-holyoake-unsplash-blog-power@2x.jpg 2x" width="285" height="300" alt="Alex Holyoake unsplash blog power">
         <div class="blog__info">
           <p>September 23, 2019</p>
-          <h3>Power of crystals</h3>
+          <h3>Power of</br>crystals</h3>
           <a>Read Article</a>
         </div>
       </div>
@@ -181,28 +181,28 @@
   <section class="questions js-questions">
     <h2>Frequently asked questions</h2>
     <div class="questions__item">
-      <h3>What materials are the jewellery made of?</h3>
+      <h3>What materials are<br class="br-mobile">the jewellery made of?</h3>
       <div class="questions__content questions__content--toggle">
         <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and
           semiprecious stones and crystals.</p>
       </div>
     </div>
     <div class="questions__item">
-      <h3>Which countries do you deliver to?</h3>
+      <h3>Which countries<br class="br-mobile">do you deliver to?</h3>
       <div class="questions__content questions__content--toggle">
         <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and
           semiprecious stones and crystals.</p>
       </div>
     </div>
     <div class="questions__item">
-      <h3>What are the payment methods?</h3>
+      <h3>What are the<br class="br-mobile">payment methods?</h3>
       <div class="questions__content questions__content--toggle">
         <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and
           semiprecious stones and crystals.</p>
       </div>
     </div>
     <div class="questions__item">
-      <h3>Can I return the jewellery if it didn’t fit me?</h3>
+      <h3>Can I return the<br class="br-mobile">jewellery if it didn’t fit me?</h3>
       <div class="questions__content questions__content--toggle">
         <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and
           semiprecious stones and crystals.</p>
@@ -230,8 +230,8 @@
   <div class="footer">
     <div class="footer__col footer__col--mailing-form">
       <form class="mailing-form">
-        <h2>The good stuff in your inbox </h2>
-        <p>News and updates from CH. No spam, we promise.</p>
+        <h2>The good stuff<br class="br-mobile">in your inbox </h2>
+        <p>News and updates from CH.<br class="br-mobile">No spam, we promise.</p>
         <div class="mailing-form__row">
           <div class="form-input">
             <label class="visually-hidden" for="your-email">Your e-mail</label>
@@ -313,11 +313,11 @@
       <h2>Log In</h2>
       <div class="form-input form-input--modal-email">
         <label class="visually-hidden" for="e-mail">Your E-mail</label>
-        <input class="js-validateEmail" type="text" maxlength="50" id="e-mail" name="e-mail" placeholder="Your E-mail" aria-label="Your E-mail" required="">
+        <input class="js-email" type="email" maxlength="50" id="email" name="e-mail" placeholder="Your E-mail" aria-label="Your E-mail">
       </div>
       <div class="form-input form-input--modal-password ">
         <label class="visually-hidden" for="password">Password</label>
-        <input class="js-validatePassword" id="password" name="password" type="password" maxlength="50" placeholder="Password" aria-label="Password" required="">
+        <input class="js-password" id="password" name="password" type="password" minlength="4" placeholder="Password" aria-label="Password" required="">
       </div>
       <a href="#" aria-label="Forgot your password?">Forgot your password?</a>
       <button class="button js-sendForm" type="submit" aria-label="Log In">Log In</button>
