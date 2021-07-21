@@ -1,7 +1,24 @@
 'use strict';
 
-var questions = document.querySelector('.js-questions');
+var layout = document.querySelector('.layout');
 
+var noJsIndicator = document.querySelector('html.no-js')
+if (noJsIndicator) {
+  noJsIndicator.classList.remove('no-js');
+}
+
+var menuToggleBtn = document.querySelector('.js-menuToggle');
+if (menuToggleBtn) {
+  var layoutHeader = document.querySelector('.layout__header');
+
+  menuToggleBtn.addEventListener('click', function(evt) {
+    evt.preventDefault();
+    layout.classList.toggle('layout--is-menu');
+    layoutHeader.classList.toggle('layout__header--is-menu');
+  })
+}
+
+var questions = document.querySelector('.js-questions');
 if (questions) {
   var accordionHeading = questions.querySelectorAll('h3');
   if (accordionHeading) {
@@ -23,7 +40,6 @@ if (questions) {
 }
 
 var filter = document.querySelector('.filter');
-
 if (filter) {
   var accordionFilter = filter.querySelectorAll('h3');
 
@@ -36,11 +52,7 @@ if (filter) {
   }
 }
 
-var layout = document.querySelector('.layout');
-var modalTriggers = document.querySelectorAll('.js-modalOpen');
-
 var sendForms = document.querySelectorAll('.js-sendForm');
-
 if (sendForms) {
   sendForms.forEach(function(trigger) {
     trigger.addEventListener('click', () => {
@@ -63,6 +75,7 @@ if (sendForms) {
   });
 }
 
+var modalTriggers = document.querySelectorAll('.js-modalOpen');
 if (modalTriggers) {
   modalTriggers.forEach(function(trigger) {
     trigger.addEventListener('click', function(evt) {
@@ -108,5 +121,3 @@ if (modalTriggers) {
     });
   });
 }
-
-

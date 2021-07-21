@@ -16,6 +16,7 @@
 
 <body class="layout">
 
+
 <header class="layout__header">
   <div class="header ">
     <button class="header-toggle" type="button" aria-label="Menu button"></button>
@@ -28,12 +29,12 @@
       <label class="visually-hidden" for="search-header">Search</label>
       <input type="search" placeholder="Type here to search" id="search-header"/>
     </form>
-    <a class="header__logo" href="index.html" aria-label="logotype Jewellery">
+    <a class="header__logo" aria-label="logotype Jewellery">
       <img src="./img/logo.svg" alt="logotype Jewellery" width="66" height="66">
     </a>
     <div class="header__info">
-      <a class="header__link--login js-modalOpen" data-popup-trigger="login" href="#" aria-label="Login">Login</a>
-      <a class="header__link--cart" href="#" aria-label="Cart">
+      <a class="header__link header__link--login js-modalOpen" data-popup-trigger="login" data-popup-focus-input="#email" href="#" aria-label="Login">Login</a>
+      <a class="header__link header__link--cart" href="#" aria-label="Cart">
         <svg width="20" height="18">
           <use xlink:href="#cart"></use>
         </svg>
@@ -51,7 +52,7 @@
     <a class="header-nav__link header-nav__link--additional" href="#" aria-label="Stores & Hours">Stores & Hours</a>
     <a class="header-nav__link header-nav__link--additional" href="#" aria-label="Contact Us">Contact Us</a>
 
-    <a class="header-nav__link header-nav__link--tablet js-modalOpen" href="#" data-popup-trigger="login" aria-label="Login">Login</a>
+    <a class="header-nav__link header-nav__link--login js-modalOpen" href="#" data-popup-trigger="login" data-popup-focus-input="#email"  aria-label="Login">Login</a>
   </nav>
 </header>
 
@@ -270,12 +271,12 @@
     <form class="form js-form" name="modalForm" id="modalForm" action="https://echo.htmlacademy.ru" method="get">
       <h2>Log In</h2>
       <div class="form-input form-input--modal-email">
-        <label class="visually-hidden" for="e-mail">Your E-mail</label>
-        <input class="js-validateEmail" type="text" maxlength="50" id="e-mail" name="e-mail" placeholder="Your E-mail" aria-label="Your E-mail" required="">
+        <label class="visually-hidden" for="email">Your E-mail</label>
+        <input class="js-email" type="email" maxlength="50" id="email" name="e-mail" placeholder="Your E-mail" aria-label="Your E-mail">
       </div>
       <div class="form-input form-input--modal-password ">
         <label class="visually-hidden" for="password">Password</label>
-        <input class="js-validatePassword" id="password" name="password" type="password" maxlength="50" placeholder="Password" aria-label="Password" required="">
+        <input class="js-password" id="password" name="password" type="password" minlength="4" placeholder="Password" aria-label="Password" required="">
       </div>
       <a href="#" aria-label="Forgot your password?">Forgot your password?</a>
       <button class="button js-sendForm" type="submit" aria-label="Log In">Log In</button>
@@ -332,8 +333,6 @@
         </svg>
       </button>
     </div>
-
-
   </div>
   <i class="modal__blackout js-modalBlackout"></i>
 </div>
