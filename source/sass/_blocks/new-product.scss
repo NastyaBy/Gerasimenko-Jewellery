@@ -207,7 +207,7 @@
     }
   }
 
-  &.is-active.is-active.is-active::after {
+  &.is-active::after {
     @include media-mobile {
       content: "  of";
       white-space: pre;
