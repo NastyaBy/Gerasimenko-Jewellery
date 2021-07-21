@@ -7,6 +7,15 @@
   flex-direction: column;
   padding: 50px 45px;
 
+  @include media-tablet {
+    padding: 49px 51px 60px;
+  }
+
+  @include  media-mobile {
+    padding: 15px;
+    width: 240px;
+  }
+
   h2 {
     margin: 0 0 20px;
     font-family: $accent-font;
@@ -16,6 +25,12 @@
     line-height: 44px;
     color: $basic-text;
     text-align: center;
+
+    @include media-tablet {
+      margin: 20px 0 15px;
+      font-size: 24px;
+      line-height: 31px;
+    }
   }
 
   a {
@@ -28,6 +43,10 @@
     text-align: end;
     color: $mailing-form-text;
     text-decoration: none;
+
+    @include media-mobile {
+      margin: 4px 0 36px;
+    }
 
     &:hover {
       text-decoration: underline;

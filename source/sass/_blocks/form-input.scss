@@ -18,8 +18,7 @@
     outline: none;
   }
 
-  &--modal-email {
-    margin-bottom: 24px;
+  &--login {
     border-bottom: 1px solid $accent-color;
 
     input {
@@ -31,16 +30,13 @@
     }
   }
 
-  &--modal-password {
-    margin-bottom: 0;
-    border-bottom: 1px solid $accent-color;
-
-    input {
-      color: $accent-color;
+  &--login-email {
+    @include media-tablet {
+      margin-bottom: 24px;
     }
 
-    &:focus {
-      border-bottom: 1px solid $basic-white;
+    @include media-mobile {
+      margin-bottom: 17px;
     }
   }
 }

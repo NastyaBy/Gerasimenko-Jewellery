@@ -30,12 +30,30 @@
   color: $basic-white;
   background: $background-modal;
 
+
+
   &--login {
     width: 430px;
+
+    @include media-tablet {
+      width: 442px;
+    }
+
+    @include media-mobile{
+      width: 270px;
+    }
   }
 
   &--add-to-cart {
     width: 500px;
+
+    @include media-tablet {
+      width: 502px;
+    }
+
+    @include media-mobile{
+      width: 290px;
+    }
   }
 
 
@@ -45,6 +63,18 @@
 
   img {
     display: block;
+
+    @include media-tablet {
+      min-height: unset;
+      min-width: 100%;
+    }
+
+    @include media-mobile {
+      min-width: 270px;
+      width: 100%;
+      height: auto;
+    }
+
   }
 }
 
@@ -77,6 +107,11 @@
   cursor: pointer;
   outline: 0;
   color: $basic-white;
+
+  @include media-mobile {
+    top: 14px;
+    right: 14px;
+  }
 
   svg {
     display: block;
