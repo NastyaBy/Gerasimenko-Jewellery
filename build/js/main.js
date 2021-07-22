@@ -28,7 +28,6 @@ if (questions) {
     });
   }
 
-
   var accordionHeading = questions.querySelectorAll('h3');
   if (accordionHeading) {
     accordionHeading.forEach(function(item) {
