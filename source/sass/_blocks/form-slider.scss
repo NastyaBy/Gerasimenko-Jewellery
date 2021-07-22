@@ -6,7 +6,7 @@
   z-index: 1;
   height: 1px;
   text-align: left;
-  margin:2px -15px 27px;
+  margin: 2px -15px 27px;
 }
 
 .form-slider-info {
@@ -59,7 +59,7 @@
     box-shadow: 0 0 0 1px $accent-color;
   }
 
-  &::after{
+  &::after {
     content: attr(data-percent);
     display: block;
     margin-top: 20px;

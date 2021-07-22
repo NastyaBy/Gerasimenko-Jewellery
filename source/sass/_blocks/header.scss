@@ -208,6 +208,7 @@
     @include media-tablet {
       margin-top: 41px;
     }
+
     @include media-mobile {
       margin-top: 32px;
     }
@@ -219,7 +220,6 @@
     }
   }
 }
-
 
 .header-toggle {
   display: none;

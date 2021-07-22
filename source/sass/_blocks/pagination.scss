@@ -11,13 +11,13 @@
   }
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 50%;
     width: 98vw;
     transform: translateX(-50%);
     margin-top: -37px;
-    border-top: 1px solid #F6F5F4;
+    border-top: 1px solid $pagination-decorative-line;
   }
 }
 

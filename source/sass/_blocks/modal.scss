@@ -30,8 +30,6 @@
   color: $basic-white;
   background: $background-modal;
 
-
-
   &--login {
     width: 430px;
 
@@ -39,7 +37,7 @@
       width: 442px;
     }
 
-    @include media-mobile{
+    @include media-mobile {
       width: 270px;
     }
   }
@@ -51,11 +49,10 @@
       width: 502px;
     }
 
-    @include media-mobile{
+    @include media-mobile {
       width: 290px;
     }
   }
-
 
   #{$modalVisible} & {
     opacity: 1;

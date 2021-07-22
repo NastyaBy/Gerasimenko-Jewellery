@@ -20,6 +20,15 @@ if (menuToggleBtn) {
 
 var questions = document.querySelector('.js-questions');
 if (questions) {
+
+  var activeQuestions = questions.querySelectorAll('.active');
+  if (activeQuestions) {
+    activeQuestions.forEach(function(item) {
+      item.classList.remove('active');
+    });
+  }
+
+
   var accordionHeading = questions.querySelectorAll('h3');
   if (accordionHeading) {
     accordionHeading.forEach(function(item) {
@@ -37,6 +46,13 @@ if (questions) {
       });
     });
   }
+}
+
+var activeFilter = document.querySelectorAll('.active-filter');
+if (activeFilter) {
+  activeFilter.forEach(function(item) {
+    item.classList.remove('active-filter');
+  });
 }
 
 var filter = document.querySelector('.filter');
