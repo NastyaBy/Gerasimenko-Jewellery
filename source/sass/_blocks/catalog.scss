@@ -2,61 +2,72 @@
 @import "../mixins/media.scss";
 
 .catalog {
-  max-width: 1170px;
+  position: relative;
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 250px 1fr;
   gap: 50px;
-  margin: 80px auto 75px;
+  max-width: 1170px;
+  margin: 74px auto 75px;
   padding: 0 45px;
 
   @include media-tablet {
     grid-template-columns: 1fr;
+    margin: 50px 45px 75px;
+    padding: 0;
+    gap: 44px;
+  }
+
+  @include media-mobile {
+    margin: 40px 15px 66px;
+    gap: 36px;
   }
 }
+.catalog__body {
 
+}
 .catalog__list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
-  gap: 36px 30px;
-  margin-bottom: 72px;
+  gap: 23px 30px;
+  margin-bottom: 65px;
+
+  @include  media-tablet {
+    gap: 17px 30px;
+  }
 
   @include media-mobile {
     grid-template-columns: 1fr 1fr;
+    margin-bottom: 51px;
   }
 }
 
 .catalog__item {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   text-align: center;
   color: $basic-text;
   text-decoration: none;
 
   img {
     display: block;
-    width: 270px;
-    height: 272px;
-
-    @include media-tablet {
-      width: 206px;
-      height: 208px;
-    }
-
-    @include media-mobile {
-      width: 130px;
-      height: 136px;
-    }
+    width: 100%;
+    height: auto;
   }
 
   h3 {
-    margin: 20px 0 7px;
+    margin: 21px 0 7px;
     padding: 0;
     font-family: $general-font;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 21px;
+
+    @include media-mobile {
+      margin-top: 19px;
+    }
   }
 
   strong {

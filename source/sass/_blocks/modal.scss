@@ -60,21 +60,20 @@
   #{$modalVisible} & {
     opacity: 1;
   }
+}
 
-  img {
-    display: block;
+.modal__fon-picture {
+  display: block;
 
-    @include media-tablet {
-      min-height: unset;
-      min-width: 100%;
-    }
+  @include media-tablet {
+    min-height: unset;
+    min-width: 100%;
+  }
 
-    @include media-mobile {
-      min-width: 270px;
-      width: 100%;
-      height: auto;
-    }
-
+  @include media-mobile {
+    min-width: 270px;
+    width: 100%;
+    height: auto;
   }
 }
 

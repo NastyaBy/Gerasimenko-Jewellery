@@ -24,6 +24,10 @@
     @include media-tablet {
       margin-bottom: 46px;
     }
+
+    @include media-mobile {
+      padding: 55px 0 15px;
+    }
   }
 
   h2 {

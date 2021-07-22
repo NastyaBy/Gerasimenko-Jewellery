@@ -49,6 +49,10 @@
     }
   }
 
+  @include media-mobile {
+    padding: 31px 0 25px;
+  }
+
   &--is-menu {
     @include media-tablet {
       position: absolute;
@@ -68,7 +72,6 @@
 .layout__main {
   flex-grow: 1;
   position: relative;
-
 
   &--login {
     margin: 0 auto;

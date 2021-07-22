@@ -86,6 +86,7 @@ if (modalTriggers) {
       var popupFocus = popupModal.querySelector(popupFocusInput);
       var bodyBlackout = popupModal.querySelector('.js-modalBlackout');
       var modalCloseBtn = popupModal.querySelector('.js-modalCloseBtn');
+      var popupScrollable = trigger.dataset.popupScrollable;
 
       if (popupFocus) {
         popupFocus.focus();
@@ -93,19 +94,27 @@ if (modalTriggers) {
 
       evt.preventDefault();
       popupModal.classList.add('is--visible');
-      bodyBlackout.classList.add('is-blacked-out');
-      layout.classList.add('layout--no-scroll');
+      if(bodyBlackout) {
+        bodyBlackout.classList.add('is-blacked-out');
 
-      bodyBlackout.addEventListener('click', function() {
-        popupModal.classList.remove('is--visible');
-        bodyBlackout.classList.remove('is-blacked-out');
-        layout.classList.remove('layout--no-scroll');
-      });
+        bodyBlackout.addEventListener('click', function() {
+          popupModal.classList.remove('is--visible');
+          bodyBlackout.classList.remove('is-blacked-out');
+          layout.classList.remove('layout--no-scroll');
+        });
+      }
+      if(!popupScrollable) {
+        layout.classList.add('layout--no-scroll');
+      }
 
       modalCloseBtn.addEventListener('click', function() {
         popupModal.classList.remove('is--visible');
-        bodyBlackout.classList.remove('is-blacked-out');
-        layout.classList.remove('layout--no-scroll');
+        if(bodyBlackout) {
+          bodyBlackout.classList.remove('is-blacked-out');
+        }
+        if(!popupScrollable) {
+          layout.classList.remove('layout--no-scroll');
+        }
       });
 
       window.addEventListener('keydown', function(e) {
@@ -113,8 +122,12 @@ if (modalTriggers) {
           if (popupModal.classList.contains('is--visible')) {
             e.preventDefault();
             popupModal.classList.remove('is--visible');
-            bodyBlackout.classList.remove('is-blacked-out');
-            layout.classList.remove('layout--no-scroll');
+            if(bodyBlackout) {
+              bodyBlackout.classList.remove('is-blacked-out');
+            }
+            if(!popupScrollable) {
+              layout.classList.remove('layout--no-scroll');
+            }
           }
         }
       });

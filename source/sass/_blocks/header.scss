@@ -20,6 +20,7 @@
 
   @include media-mobile {
     margin: 0 15px;
+    padding: 18px 0 0;
   }
 }
 
@@ -42,6 +43,17 @@
     .layout__header--is-menu & {
       color: $basic-white;
     }
+  }
+
+  @include media-mobile {
+    width: 52px;
+    height: 52px;
+    transform: translate(-50%, -41px);
+  }
+
+  svg {
+    display: block;
+    width: 100%;
   }
 }
 
@@ -130,6 +142,10 @@
     }
   }
 
+  @include media-mobile {
+    padding: 0 15px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -191,6 +207,9 @@
   &--separator-top {
     @include media-tablet {
       margin-top: 41px;
+    }
+    @include media-mobile {
+      margin-top: 32px;
     }
   }
 

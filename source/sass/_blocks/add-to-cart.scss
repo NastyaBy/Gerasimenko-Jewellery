@@ -7,6 +7,14 @@
   padding: 47px 35px 55px;
   background: $basic-white;
 
+  @include media-tablet {
+    padding: 47px 30px 55px;
+  }
+
+  @include  media-mobile {
+    padding: 47px 15px 55px;
+  }
+
   h2 {
     margin: 0;
     padding-bottom: 5px;
@@ -32,8 +40,12 @@
 }
 
 .add-to-cart__info {
-  margin: 0 23px;
+  margin: 0 18px;
   flex-grow: 1;
+
+  @include media-tablet {
+    margin: 0 24px;
+  }
 
   h3 {
     margin: 0 0 8px;
@@ -63,6 +75,10 @@
   margin: 20px 0 34px;
   text-align: center;
 
+  @include media-tablet {
+    margin: 20px 0 36px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -70,6 +86,12 @@
     left: -35px;
     right: -35px;
     border-top: 1px solid $border-top-modal-color;
+
+    @include media-tablet {
+      top: -17px;
+      left: -30px;
+      right: -30px;
+    }
   }
 
   p {

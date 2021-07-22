@@ -17,6 +17,14 @@
       display: block;
     }
   }
+
+  @include media-tablet {
+    margin: 20px 0 25px;
+  }
+
+  @include media-mobile {
+    margin: 16px 0 13px;
+  }
 }
 
 .search__submit {
@@ -35,6 +43,10 @@
 
   svg {
     display: block;
+
+    @include media-tablet {
+      width: 30px;
+    }
   }
 }
 
@@ -56,5 +68,9 @@
     line-height: 40px;
     border-radius: 20px;
     color: $basic-white;
+
+    &::placeholder {
+      opacity: 0;
+    }
   }
 }

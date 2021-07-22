@@ -6,17 +6,45 @@
   justify-content: space-between;
   font-family: $general-font;
 
-  a {
-    padding: 0;
-    color: $basic-text;
-    font-family: $general-font;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 21px;
-    text-decoration: none;
+  @include media-mobile {
+    justify-content: center;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 98vw;
+    transform: translateX(-50%);
+    margin-top: -37px;
+    border-top: 1px solid #F6F5F4;
   }
 }
+
+.pagination__button-nav {
+  min-width: 70px;
+  padding: 0;
+  color: $basic-text;
+  font-family: $general-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:last-child {
+    text-align: right;
+  }
+
+  @include media-mobile {
+    display: none;
+  }
+}
+
 
 .pagination__nav {
   a {
@@ -26,7 +54,7 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 21px;
-
+    text-decoration: none;
     color: $mailing-form-text;
   }
 }
