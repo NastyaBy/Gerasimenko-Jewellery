@@ -2,7 +2,7 @@
 
 var layout = document.querySelector('.layout');
 
-var noJsIndicator = document.querySelector('html.no-js')
+var noJsIndicator = document.querySelector('html.no-js');
 if (noJsIndicator) {
   noJsIndicator.classList.remove('no-js');
 }
@@ -11,11 +11,11 @@ var menuToggleBtn = document.querySelector('.js-menuToggle');
 if (menuToggleBtn) {
   var layoutHeader = document.querySelector('.layout__header');
 
-  menuToggleBtn.addEventListener('click', function(evt) {
+  menuToggleBtn.addEventListener('click', function (evt) {
     evt.preventDefault();
     layout.classList.toggle('layout--is-menu');
     layoutHeader.classList.toggle('layout__header--is-menu');
-  })
+  });
 }
 
 var questions = document.querySelector('.js-questions');
@@ -23,19 +23,19 @@ if (questions) {
 
   var activeQuestions = questions.querySelectorAll('.active');
   if (activeQuestions) {
-    activeQuestions.forEach(function(item) {
+    activeQuestions.forEach(function (item) {
       item.classList.remove('active');
     });
   }
 
   var accordionHeading = questions.querySelectorAll('h3');
   if (accordionHeading) {
-    accordionHeading.forEach(function(item) {
-      item.addEventListener('click', function() {
+    accordionHeading.forEach(function (item) {
+      item.addEventListener('click', function () {
         if (item.classList.contains('active')) {
           item.classList.remove('active');
         } else {
-          accordionHeading.forEach(function(element) {
+          accordionHeading.forEach(function (element) {
             if (element.classList.contains('active')) {
               element.classList.remove('active');
             }
@@ -49,7 +49,7 @@ if (questions) {
 
 var activeFilter = document.querySelectorAll('.active-filter');
 if (activeFilter) {
-  activeFilter.forEach(function(item) {
+  activeFilter.forEach(function (item) {
     item.classList.remove('active-filter');
   });
 }
@@ -59,8 +59,8 @@ if (filter) {
   var accordionFilter = filter.querySelectorAll('h3');
 
   if (accordionFilter) {
-    accordionFilter.forEach(function(item) {
-      item.addEventListener('click', function() {
+    accordionFilter.forEach(function (item) {
+      item.addEventListener('click', function () {
         item.classList.toggle('active-filter');
       });
     });
@@ -69,13 +69,11 @@ if (filter) {
 
 var sendForms = document.querySelectorAll('.js-sendForm');
 if (sendForms) {
-  sendForms.forEach(function(trigger) {
+  sendForms.forEach(function (trigger) {
     trigger.addEventListener('click', () => {
-      var form = trigger.closest("form")
+      var form = trigger.closest("form");
       var inputEmail = form.querySelector('.js-email');
       var inputPassword = form.querySelector('.js-password');
-
-      console.log(form)
 
       if (inputEmail && inputPassword) {
         var obj = {
@@ -92,8 +90,8 @@ if (sendForms) {
 
 var modalTriggers = document.querySelectorAll('.js-modalOpen');
 if (modalTriggers) {
-  modalTriggers.forEach(function(trigger) {
-    trigger.addEventListener('click', function(evt) {
+  modalTriggers.forEach(function (trigger) {
+    trigger.addEventListener('click', function (evt) {
       var popupTrigger = trigger.dataset.popupTrigger;
       var popupModal = document.querySelector(
         '[data-popup-modal=' + popupTrigger + ']');
@@ -112,7 +110,7 @@ if (modalTriggers) {
       if(bodyBlackout) {
         bodyBlackout.classList.add('is-blacked-out');
 
-        bodyBlackout.addEventListener('click', function() {
+        bodyBlackout.addEventListener('click', function () {
           popupModal.classList.remove('is--visible');
           bodyBlackout.classList.remove('is-blacked-out');
           layout.classList.remove('layout--no-scroll');
@@ -122,7 +120,7 @@ if (modalTriggers) {
         layout.classList.add('layout--no-scroll');
       }
 
-      modalCloseBtn.addEventListener('click', function() {
+      modalCloseBtn.addEventListener('click', function () {
         popupModal.classList.remove('is--visible');
         if(bodyBlackout) {
           bodyBlackout.classList.remove('is-blacked-out');
