@@ -2,56 +2,6 @@
 @import "../mixins/media.scss";
 
 .blog {
-  max-width: 1170px;
-  margin: 0 auto;
-  padding: 85px 45px 50px;
-  text-align: center;
-  overflow: hidden;
-
-  @include media-tablet {
-    margin: 0 45px;
-    padding: 38px 0 50px;
-  }
-
-  @include media-mobile {
-    margin: 0 15px;
-    padding: 26px 0 42px;
-  }
-
-  h2 {
-    margin: 0 0 19px;
-    padding: 0;
-    font-family: $accent-font;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 34px;
-    line-height: 44px;
-    letter-spacing: 0.03em;
-
-    @include media-tablet {
-      margin: 0 0 16px;
-    }
-  }
-
-  a {
-    display: inline-block;
-    vertical-align: top;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 26px;
-    color: $basic-text;
-    text-decoration: none;
-    border-bottom: 1px solid $accent-color;
-    cursor: pointer;
-
-    &:hover {
-      border-bottom-color: transparent;
-    }
-  }
-}
-
-.blog__list {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: min-content min-content;

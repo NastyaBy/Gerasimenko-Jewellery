@@ -199,25 +199,6 @@
     text-decoration: underline;
   }
 
-  &.is-active {
-    color: $basic-text;
-
-    @include media-mobile {
-      position: unset;
-      width: unset;
-      height: unset;
-      margin: unset;
-      visibility: unset;
-    }
-  }
-
-  &.is-active::after {
-    @include media-mobile {
-      content: "  of";
-      white-space: pre;
-    }
-  }
-
   @include media-mobile {
     position: absolute;
     width: 1px;
@@ -225,5 +206,24 @@
     margin: -1px;
     visibility: hidden;
     pointer-events: none;
+  }
+}
+
+.new-product__pagination button.is-active {
+  color: $basic-text;
+
+  @include media-mobile {
+    position: unset;
+    width: unset;
+    height: unset;
+    margin: unset;
+    visibility: unset;
+  }
+}
+
+.new-product__pagination button.is-active::after {
+  @include media-mobile {
+    content: "  of";
+    white-space: pre;
   }
 }

@@ -66,10 +66,31 @@
   <h1 class="visually-hidden">Product cat</h1>
   <section class="product-cart">
     <div class="product-cart__pictures">
-      <img class="product-cart__picture-item" src="./img/gold-necklace-for-women@1x.jpg" srcset="./img/gold-necklace-for-women@2x.jpg 2x" width="100" height="125" alt="Gold necklace for women">
-      <img class="product-cart__picture-item" src="./img/pretty-gold-necklace@1x.jpg" srcset="./img/pretty-gold-necklace@2x.jpg 2x" width="100" height="125" alt="Pretty gold necklace">
-      <img class="product-cart__picture-item" src="./img/womens-necklace-set@1x.jpg" srcset="./img/womens-necklace-set@2x.jpg 2x" width="100" height="125" alt="Womens necklace set">
-      <img class="product-cart__picture-item product-cart__picture-item--big" src="./img/necklace-detail@1x.jpg" srcset="./img/necklace-detail@2x.jpg 2x" width="470" height="435" alt="Necklace detail">
+      <picture class="product-cart__picture-item">
+        <!-- 1х: 100px; 2x: 200px -->
+        <source type="image/webp" srcset="./img/gold-necklace-for-women@1x.webp 1x, ./img/gold-necklace-for-women@2x.webp 2x">
+        <!-- 1х: 100px; 2x: 200px -->
+        <img src="./img/gold-necklace-for-women@1x.jpg" srcset="./img/gold-necklace-for-women@2x.jpg 2x" width="100" height="125" alt="Gold necklace for women">
+      </picture>
+      <picture class="product-cart__picture-item">
+        <!-- 1х: 100px; 2x: 200px -->
+        <source type="image/webp" srcset="./img/pretty-gold-necklace@1x.webp 1x, ./img/pretty-gold-necklace@2x.webp 2x">
+        <!-- 1х: 100px; 2x: 200px -->
+        <img src="./img/pretty-gold-necklace@1x.jpg" srcset="./img/pretty-gold-necklace@2x.jpg 2x" width="100" height="125" alt="Pretty gold necklace">
+      </picture>
+      <picture  class="product-cart__picture-item">
+        <!-- 1х: 100px; 2x: 200px -->
+        <source type="image/webp" srcset="./img/womens-necklace-set@1x.webp 1x, ./img/womens-necklace-set@2x.webp 2x">
+        <!-- 1х: 100px; 2x: 200px -->
+        <img src="./img/womens-necklace-set@1x.jpg" srcset="./img/womens-necklace-set@2x.jpg 2x" width="100" height="125" alt="Womens necklace set">
+      </picture>
+      <picture class="product-cart__picture-item product-cart__picture-item--big">
+        <!-- 1х: 470px; 2x: 940px -->
+        <source type="image/webp" srcset="./img/necklace-detail@1x.webp 1x, ./img/necklace-detail@2x.webp 2x">
+        <!-- 1х: 470px; 2x: 200px -->
+        <img src="./img/necklace-detail@1x.jpg" srcset="./img/necklace-detail@2x.jpg 2x" width="470" height="435" alt="Necklace detail">
+      </picture>
+
     </div>
 
     <div class="product-cart__description">
@@ -125,64 +146,127 @@
 
       <div class="splide__track new-product__track">
         <div class="splide__list new-product__list">
+
           <a class="splide__slide new-product__item" href="#">
-            <img src="./img/purple-gemstone-necklace@1x.jpg" srcset="./img/purple-gemstone-necklace@2x.jpg 2x" width="270" height="284" alt="Necklace with amethyst">
+            <picture>
+              <!-- 1х: 270px; 2x: 540px -->
+              <source type="image/webp" srcset="./img/purple-gemstone-necklace@1x.webp 1x, ./img/purple-gemstone-necklace@2x.webp 2x">
+              <!-- 1х: 270px; 2x: 540px -->
+              <img src="./img/purple-gemstone-necklace@1x.jpg" srcset="./img/purple-gemstone-necklace@2x.jpg 2x" width="270" height="284" alt="Necklace with amethyst">
+            </picture>
             <h3>Necklace with amethyst</h3>
             <strong>$ 145</strong>
           </a>
           <a class="splide__slide new-product__item" href="#">
-            <img src="./img/layered-choker-necklace@1x.jpg" srcset="./img/layered-choker-necklace@2x.jpg 2x" width="270" height="284" alt="Layered сhoker">
+            <picture>
+              <!-- 1х: 270px; 2x: 540px -->
+              <source type="image/webp" srcset="./img/layered-choker-necklace@1x.webp 1x, ./img/layered-choker-necklace@2x.webp 2x">
+              <!-- 1х: 270px; 2x: 540px -->
+              <img src="./img/layered-choker-necklace@1x.jpg" srcset="./img/layered-choker-necklace@2x.jpg 2x" width="270" height="284" alt="Layered сhoker">
+            </picture>
             <h3>Layered сhoker</h3>
             <strong>$ 115</strong>
           </a>
           <a class="splide__slide new-product__item" href="#">
-            <img src="./img/dainty-gold-necklace@1x.jpg" srcset="./img/dainty-gold-necklace@2x.jpg 2x" width="270" height="284" alt="Gold chain">
+            <picture>
+              <!-- 1х: 270px; 2x: 540px -->
+              <source type="image/webp" srcset="./img/dainty-gold-necklace@1x.webp 1x, ./img/dainty-gold-necklace@2x.webp 2x">
+              <!-- 1х: 270px; 2x: 540px -->
+              <img src="./img/dainty-gold-necklace@1x.jpg" srcset="./img/dainty-gold-necklace@2x.jpg 2x" width="270" height="284" alt="Gold chain">
+            </picture>
             <h3>Gold chain</h3>
             <strong>$ 215</strong>
           </a>
           <a class="splide__slide new-product__item" href="#">
-            <img src="./img/galaxy-earrings@1x.jpg" srcset="./img/galaxy-earrings@2x.jpg 2x" width="270" height="284" alt="Galaxy earrings">
+            <picture>
+              <!-- 1х: 270px; 2x: 540px -->
+              <source type="image/webp" srcset="./img/galaxy-earrings@1x.webp 1x, ./img/galaxy-earrings@2x.webp 2x">
+              <!-- 1х: 270px; 2x: 540px -->
+              <img src="./img/galaxy-earrings@1x.jpg" srcset="./img/galaxy-earrings@2x.jpg 2x" width="270" height="284" alt="Galaxy earrings">
+            </picture>
             <h3>Galaxy earrings</h3>
             <strong>$ 95</strong>
           </a>
+
           <a class="splide__slide new-product__item" href="#">
-            <img src="./img/purple-gemstone-necklace@1x.jpg" srcset="./img/purple-gemstone-necklace@2x.jpg 2x" width="270" height="284" alt="Necklace with amethyst">
-            <h3>Для страницы 2</h3>
+            <picture>
+              <!-- 1х: 270px; 2x: 540px -->
+              <source type="image/webp" srcset="./img/purple-gemstone-necklace@1x.webp 1x, ./img/purple-gemstone-necklace@2x.webp 2x">
+              <!-- 1х: 270px; 2x: 540px -->
+              <img src="./img/purple-gemstone-necklace@1x.jpg" srcset="./img/purple-gemstone-necklace@2x.jpg 2x" width="270" height="284" alt="Necklace with amethyst">
+            </picture>
+            <h3>Necklace with amethyst</h3>
             <strong>$ 145</strong>
           </a>
           <a class="splide__slide new-product__item" href="#">
-            <img src="./img/layered-choker-necklace@1x.jpg" srcset="./img/layered-choker-necklace@2x.jpg 2x" width="270" height="284" alt="Layered сhoker">
-            <h3>Для страницы 2</h3>
+            <picture>
+              <!-- 1х: 270px; 2x: 540px -->
+              <source type="image/webp" srcset="./img/layered-choker-necklace@1x.webp 1x, ./img/layered-choker-necklace@2x.webp 2x">
+              <!-- 1х: 270px; 2x: 540px -->
+              <img src="./img/layered-choker-necklace@1x.jpg" srcset="./img/layered-choker-necklace@2x.jpg 2x" width="270" height="284" alt="Layered сhoker">
+            </picture>
+            <h3>Layered сhoker</h3>
             <strong>$ 115</strong>
           </a>
           <a class="splide__slide new-product__item" href="#">
-            <img src="./img/dainty-gold-necklace@1x.jpg" srcset="./img/dainty-gold-necklace@2x.jpg 2x" width="270" height="284" alt="Gold chain">
-            <h3>Для страницы 2</h3>
+            <picture>
+              <!-- 1х: 270px; 2x: 540px -->
+              <source type="image/webp" srcset="./img/dainty-gold-necklace@1x.webp 1x, ./img/dainty-gold-necklace@2x.webp 2x">
+              <!-- 1х: 270px; 2x: 540px -->
+              <img src="./img/dainty-gold-necklace@1x.jpg" srcset="./img/dainty-gold-necklace@2x.jpg 2x" width="270" height="284" alt="Gold chain">
+            </picture>
+            <h3>Gold chain</h3>
             <strong>$ 215</strong>
           </a>
           <a class="splide__slide new-product__item" href="#">
-            <img src="./img/galaxy-earrings@1x.jpg" srcset="./img/galaxy-earrings@2x.jpg 2x" width="270" height="284" alt="Galaxy earrings">
-            <h3>Для страницы 2</h3>
+            <picture>
+              <!-- 1х: 270px; 2x: 540px -->
+              <source type="image/webp" srcset="./img/galaxy-earrings@1x.webp 1x, ./img/galaxy-earrings@2x.webp 2x">
+              <!-- 1х: 270px; 2x: 540px -->
+              <img src="./img/galaxy-earrings@1x.jpg" srcset="./img/galaxy-earrings@2x.jpg 2x" width="270" height="284" alt="Galaxy earrings">
+            </picture>
+            <h3>Galaxy earrings</h3>
             <strong>$ 95</strong>
           </a>
+
           <a class="splide__slide new-product__item" href="#">
-            <img src="./img/purple-gemstone-necklace@1x.jpg" srcset="./img/purple-gemstone-necklace@2x.jpg 2x" width="270" height="284" alt="Necklace with amethyst">
-            <h3>Для страницы 3</h3>
+            <picture>
+              <!-- 1х: 270px; 2x: 540px -->
+              <source type="image/webp" srcset="./img/purple-gemstone-necklace@1x.webp 1x, ./img/purple-gemstone-necklace@2x.webp 2x">
+              <!-- 1х: 270px; 2x: 540px -->
+              <img src="./img/purple-gemstone-necklace@1x.jpg" srcset="./img/purple-gemstone-necklace@2x.jpg 2x" width="270" height="284" alt="Necklace with amethyst">
+            </picture>
+            <h3>Necklace with amethyst</h3>
             <strong>$ 145</strong>
           </a>
           <a class="splide__slide new-product__item" href="#">
-            <img src="./img/layered-choker-necklace@1x.jpg" srcset="./img/layered-choker-necklace@2x.jpg 2x" width="270" height="284" alt="Layered сhoker">
-            <h3>Для страницы 3</h3>
+            <picture>
+              <!-- 1х: 270px; 2x: 540px -->
+              <source type="image/webp" srcset="./img/layered-choker-necklace@1x.webp 1x, ./img/layered-choker-necklace@2x.webp 2x">
+              <!-- 1х: 270px; 2x: 540px -->
+              <img src="./img/layered-choker-necklace@1x.jpg" srcset="./img/layered-choker-necklace@2x.jpg 2x" width="270" height="284" alt="Layered сhoker">
+            </picture>
+            <h3>Layered сhoker</h3>
             <strong>$ 115</strong>
           </a>
           <a class="splide__slide new-product__item" href="#">
-            <img src="./img/dainty-gold-necklace@1x.jpg" srcset="./img/dainty-gold-necklace@2x.jpg 2x" width="270" height="284" alt="Gold chain">
-            <h3>Для страницы 3</h3>
+            <picture>
+              <!-- 1х: 270px; 2x: 540px -->
+              <source type="image/webp" srcset="./img/dainty-gold-necklace@1x.webp 1x, ./img/dainty-gold-necklace@2x.webp 2x">
+              <!-- 1х: 270px; 2x: 540px -->
+              <img src="./img/dainty-gold-necklace@1x.jpg" srcset="./img/dainty-gold-necklace@2x.jpg 2x" width="270" height="284" alt="Gold chain">
+            </picture>
+            <h3>Gold chain</h3>
             <strong>$ 215</strong>
           </a>
           <a class="splide__slide new-product__item" href="#">
-            <img src="./img/galaxy-earrings@1x.jpg" srcset="./img/galaxy-earrings@2x.jpg 2x" width="270" height="284" alt="Galaxy earrings">
-            <h3>Для страницы 3</h3>
+            <picture>
+              <!-- 1х: 270px; 2x: 540px -->
+              <source type="image/webp" srcset="./img/galaxy-earrings@1x.webp 1x, ./img/galaxy-earrings@2x.webp 2x">
+              <!-- 1х: 270px; 2x: 540px -->
+              <img src="./img/galaxy-earrings@1x.jpg" srcset="./img/galaxy-earrings@2x.jpg 2x" width="270" height="284" alt="Galaxy earrings">
+            </picture>
+            <h3>Galaxy earrings</h3>
             <strong>$ 95</strong>
           </a>
         </div>
@@ -274,7 +358,12 @@
 
 <div class="modal js-modal" data-popup-modal="login">
   <div class="modal__inner modal__inner--login">
-    <img class="modal__fon-picture" src="./img/sweet-ice-cream-photography@1x.jpg" srcset="./img/sweet-ice-cream-photography@2x.jpg 2x" width="430" height="138" alt="sweet-ice-cream-photography">
+    <picture>
+      <!-- 1х: 430px; 2x: 860px -->
+      <source type="image/webp" srcset="./img/sweet-ice-cream-photography@1x.webp 1x, ./img/sweet-ice-cream-photography@2x.webp 2x">
+      <!-- 1х: 4300px; 2x: 860px -->
+      <img class="modal__fon-picture" src="./img/sweet-ice-cream-photography@1x.jpg" srcset="./img/sweet-ice-cream-photography@2x.jpg 2x" width="430" height="138" alt="sweet-ice-cream-photography">
+    </picture>
     <form class="form js-form" name="modalForm" id="modalForm" action="https://echo.htmlacademy.ru" method="get">
       <h2>Log In</h2>
       <div class="form-input form-input--login">
@@ -306,7 +395,12 @@
     <div class="add-to-cart">
       <h2>The item was added to your cart</h2>
       <div class="add-to-cart__product">
-        <img class="add-to-cart__image" src="./img/necklace-detail@1x.jpg" srcset="./img/necklace-detail@2x.jpg 2x" width="470" height="435" alt="Necklace detail">
+        <picture>
+          <!-- 1х: 470px; 2x: 940px -->
+          <source type="image/webp" srcset="./img/necklace-detail@1x.webp 1x, ./img/necklace-detail@2x.webp 2x">
+          <!-- 1х: 470px; 2x: 940px -->
+          <img class="add-to-cart__image" src="./img/necklace-detail@1x.jpg" srcset="./img/necklace-detail@2x.jpg 2x" width="470" height="435" alt="Necklace detail">
+        </picture>
         <div class="add-to-cart__info">
           <h3>Gold Necklace </h3>
           <span>$ 115</span>

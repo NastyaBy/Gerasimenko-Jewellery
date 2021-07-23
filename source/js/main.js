@@ -70,8 +70,8 @@ if (filter) {
 var sendForms = document.querySelectorAll('.js-sendForm');
 if (sendForms) {
   sendForms.forEach(function (trigger) {
-    trigger.addEventListener('click', () => {
-      var form = trigger.closest("form");
+    trigger.addEventListener('click', function () {
+      var form = trigger.closest('form');
       var inputEmail = form.querySelector('.js-email');
       var inputPassword = form.querySelector('.js-password');
 
@@ -93,8 +93,7 @@ if (modalTriggers) {
   modalTriggers.forEach(function (trigger) {
     trigger.addEventListener('click', function (evt) {
       var popupTrigger = trigger.dataset.popupTrigger;
-      var popupModal = document.querySelector(
-        '[data-popup-modal=' + popupTrigger + ']');
+      var popupModal = document.querySelector('[data-popup-modal=' + popupTrigger + ']');
       var popupFocusInput = trigger.dataset.popupFocusInput;
       var popupFocus = popupModal.querySelector(popupFocusInput);
       var bodyBlackout = popupModal.querySelector('.js-modalBlackout');
@@ -107,7 +106,7 @@ if (modalTriggers) {
 
       evt.preventDefault();
       popupModal.classList.add('is--visible');
-      if(bodyBlackout) {
+      if (bodyBlackout) {
         bodyBlackout.classList.add('is-blacked-out');
 
         bodyBlackout.addEventListener('click', function () {
@@ -116,29 +115,29 @@ if (modalTriggers) {
           layout.classList.remove('layout--no-scroll');
         });
       }
-      if(!popupScrollable) {
+      if (!popupScrollable) {
         layout.classList.add('layout--no-scroll');
       }
 
       modalCloseBtn.addEventListener('click', function () {
         popupModal.classList.remove('is--visible');
-        if(bodyBlackout) {
+        if (bodyBlackout) {
           bodyBlackout.classList.remove('is-blacked-out');
         }
-        if(!popupScrollable) {
+        if (!popupScrollable) {
           layout.classList.remove('layout--no-scroll');
         }
       });
 
-      window.addEventListener('keydown', function(e) {
+      window.addEventListener('keydown', function (e) {
         if (e.keyCode === 27) {
           if (popupModal.classList.contains('is--visible')) {
             e.preventDefault();
             popupModal.classList.remove('is--visible');
-            if(bodyBlackout) {
+            if (bodyBlackout) {
               bodyBlackout.classList.remove('is-blacked-out');
             }
-            if(!popupScrollable) {
+            if (!popupScrollable) {
               layout.classList.remove('layout--no-scroll');
             }
           }
