@@ -22,21 +22,26 @@
 }
 
 .album__item {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-
-  &--big {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 3;
-    height: 100%;
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
   }
 
   &--no-mobile {
     @include media-mobile {
       display: none;
     }
+  }
+}
+
+.album__item--big {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+
+  img {
+    height: 100%;
   }
 }
