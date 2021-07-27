@@ -24,7 +24,7 @@
       </svg>
     </button>
     <form class="search">
-      <button class="search__submit" type="submit">
+      <button class="search__submit" type="submit" aria-label="search">
         <svg width="14" height="14">
           <use xlink:href="#search"></use>
         </svg>
@@ -67,7 +67,7 @@
         <h2>Log In</h2>
         <div class="form-input form-input--login">
           <label class="visually-hidden" for="e-mail">Your E-mail</label>
-          <input class="js-validateEmail" type="email" id="e-mail" name="e-mail" placeholder="Your E-mail" aria-label="Your E-mail" required="">
+          <input class="js-validateEmail" type="email" id="e-mail" name="e-mail" placeholder="Your E-mail" aria-label="Your E-mail" required>
         </div>
         <div class="form-input form-input--login">
           <label class="visually-hidden" for="password">Password</label>
@@ -91,7 +91,7 @@
         <div class="mailing-form__row">
           <div class="form-input">
             <label class="visually-hidden" for="your-email">Your e-mail</label>
-            <input id="your-email" type="text" placeholder="Your E-mail"/>
+            <input id="your-email" type="text" placeholder="Your E-mail" required/>
           </div>
           <button type="submit">Sign Up
             <svg width="30" height="11">

@@ -27,6 +27,7 @@
   grid-template-columns: min-content 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   gap: 30px;
+  align-self: start;
 
   @include media-tablet {
     grid-template-columns: 1fr 1fr 1fr;
@@ -37,6 +38,7 @@
   @include media-mobile {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
+    gap: 0;
   }
 }
 

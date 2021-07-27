@@ -51,6 +51,7 @@
 
     @include media-mobile {
       width: 290px;
+      transform: translateY(117px);
     }
   }
 
@@ -95,8 +96,8 @@
   z-index: 2;
   top: 20px;
   right: 20px;
-  margin: 0;
-  padding: 0;
+  margin: -10px;
+  padding: 10px;
   border: 0;
   background: 0;
   cursor: pointer;
@@ -113,6 +114,6 @@
   }
 
   &:focus {
-    box-shadow: 0 0 0 3px $basic-white;
+    box-shadow: 0 0 0 2px $accent-color;
   }
 }

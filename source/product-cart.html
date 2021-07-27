@@ -25,7 +25,7 @@
       </svg>
     </button>
     <form class="search">
-      <button class="search__submit" type="submit">
+      <button class="search__submit" type="submit" aria-label="search">
         <svg width="14" height="14">
           <use xlink:href="#search"></use>
         </svg>
@@ -116,7 +116,7 @@
         </tr>
       </table>
 
-      <a class="button js-modalOpen" href="#" data-popup-trigger="add-to-cart">Add to cart</a>
+      <a class="button js-modalOpen" href="#" data-popup-trigger="add-to-cart" data-popup-focus-input="#close" >Add to cart</a>
 
       <div class="product-cart__offers">
         <p>14 Day Returns</p>
@@ -285,7 +285,7 @@
         <div class="mailing-form__row">
           <div class="form-input">
             <label class="visually-hidden" for="your-email">Your e-mail</label>
-            <input type="email" maxlength="50" id="your-email" name="e-mail" placeholder="Your E-mail" aria-label="Your E-mail">
+            <input type="email" maxlength="50" id="your-email" name="e-mail" placeholder="Your E-mail" aria-label="Your E-mail" required>
           </div>
           <button type="submit">Sign Up
             <svg width="30" height="11">
@@ -366,9 +366,9 @@
     </picture>
     <form class="form js-form" name="modalForm" id="modalForm" action="https://echo.htmlacademy.ru" method="get">
       <h2>Log In</h2>
-      <div class="form-input form-input--login">
+      <div class="form-input form-input--login form-input--login-email">
         <label class="visually-hidden" for="email">Your E-mail</label>
-        <input class="js-email" type="email" maxlength="50" id="email" name="e-mail" placeholder="Your E-mail" aria-label="Your E-mail">
+        <input class="js-email" type="email" maxlength="50" id="email" name="e-mail" placeholder="Your E-mail" aria-label="Your E-mail" required>
       </div>
       <div class="form-input form-input--login ">
         <label class="visually-hidden" for="password">Password</label>
@@ -393,13 +393,13 @@
 <div class="modal js-modal" data-popup-modal="add-to-cart">
   <div class="modal__inner modal__inner--add-to-cart">
     <div class="add-to-cart">
-      <h2>The item was added to your cart</h2>
+      <h2>The item was added<br class="br-mobile"> to your cart</h2>
       <div class="add-to-cart__product">
-        <picture>
+        <picture class="add-to-cart__image">
           <!-- 1х: 470px; 2x: 940px -->
           <source type="image/webp" srcset="./img/necklace-detail@1x.webp 1x, ./img/necklace-detail@2x.webp 2x">
           <!-- 1х: 470px; 2x: 940px -->
-          <img class="add-to-cart__image" src="./img/necklace-detail@1x.jpg" srcset="./img/necklace-detail@2x.jpg 2x" width="470" height="435" alt="Necklace detail">
+          <img src="./img/necklace-detail@1x.jpg" srcset="./img/necklace-detail@2x.jpg 2x" width="470" height="435" alt="Necklace detail">
         </picture>
         <div class="add-to-cart__info">
           <h3>Gold Necklace </h3>
@@ -428,7 +428,7 @@
         <a class="button button--white" href="catalog.html" aria-label="Continue shopping">Continue shopping</a>
         <a class="button" href="#" >Checkout</a>
       </div>
-      <button class="modal__button-close js-modalCloseBtn" type="reset" aria-label="Close add to cart">
+      <button class="modal__button-close js-modalCloseBtn" type="reset" id="close" aria-label="Close add to cart">
         <svg width="17" height="17">
           <use xlink:href="#close-icon"></use>
         </svg>

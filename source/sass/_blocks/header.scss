@@ -186,7 +186,6 @@
 
     @include media-tablet {
       display: block;
-      margin-bottom: 75px;
       font-size: 18px;
       line-height: 23px;
     }
@@ -248,4 +247,28 @@
 
 .header-toggle__icon {
   display: block;
+}
+
+.no-js .header-toggle {
+  @include media-tablet {
+    color: $basic-white;
+  }
+}
+
+.no-js .header__logo {
+  @include media-tablet {
+    color: $basic-white;
+  }
+}
+
+.no-js .header__link {
+  @include media-tablet {
+    color: $basic-white;
+  }
+}
+
+.no-js .header-nav {
+  @include media-tablet {
+    display: flex;
+  }
 }

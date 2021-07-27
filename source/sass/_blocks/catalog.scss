@@ -7,19 +7,19 @@
   grid-template-columns: 250px 1fr;
   gap: 50px;
   max-width: 1170px;
-  margin: 74px auto 75px;
+  margin: 80px auto 75px;
   padding: 0 45px;
 
   @include media-tablet {
     grid-template-columns: 1fr;
     margin: 50px 45px 75px;
     padding: 0;
-    gap: 44px;
+    gap: 50px;
   }
 
   @include media-mobile {
-    margin: 40px 15px 66px;
-    gap: 36px;
+    margin: 40px 15px 65px;
+    gap: 39px;
   }
 }
 
@@ -31,12 +31,13 @@
   margin-bottom: 65px;
 
   @include media-tablet {
-    gap: 17px 30px;
+    gap: 26px 30px;
   }
 
   @include media-mobile {
     grid-template-columns: 1fr 1fr;
-    margin-bottom: 51px;
+    margin-bottom: 41px;
+    gap: 25px 30px;
   }
 }
 
@@ -52,6 +53,10 @@
     display: block;
     width: 100%;
     height: auto;
+
+    @include media-mobile {
+      height: 136px;
+    }
   }
 
   h3 {
@@ -64,7 +69,7 @@
     line-height: 21px;
 
     @include media-mobile {
-      margin-top: 19px;
+      margin-top: 16px;
     }
   }
 

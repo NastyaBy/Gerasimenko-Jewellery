@@ -31,9 +31,7 @@
   }
 
   &--login-email {
-    @include media-tablet {
-      margin-bottom: 24px;
-    }
+    margin-bottom: 24px;
 
     @include media-mobile {
       margin-bottom: 17px;

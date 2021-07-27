@@ -66,6 +66,10 @@
   h2 {
     margin: 0 0 29px;
 
+    @include media-tablet {
+      margin-bottom: 18px;
+    }
+
     &::before {
       content: "@";
       font-size: 42px;

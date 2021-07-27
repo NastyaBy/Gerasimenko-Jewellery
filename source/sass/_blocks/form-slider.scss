@@ -7,6 +7,10 @@
   height: 1px;
   text-align: left;
   margin: 2px -15px 27px;
+
+  @include media-tablet {
+    margin: 4px -15px 10px  ;
+  }
 }
 
 .form-slider-info {
@@ -41,6 +45,12 @@
   height: 1px;
   border-radius: 14px;
   background-color: $accent-color;
+
+  @include media-tablet {
+    left: 18%;
+    right: 37%;
+  }
+
 }
 
 .form-slider-info__thumb {
@@ -55,6 +65,11 @@
   background-color: $accent-color;
   border-radius: 50%;
 
+  @include media-tablet {
+    height: 18px;
+    width: 18px;
+  }
+
   &:hover {
     box-shadow: 0 0 0 1px $accent-color;
   }
@@ -68,15 +83,28 @@
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
-    line-height: 130%;
+    line-height: 21px;
     white-space: nowrap;
+
+    @include media-tablet {
+      font-size: 16px;
+      line-height: 21px;
+    }
   }
 
   &--left {
     left: 28%;
+
+    @include media-tablet {
+      left: 18%;
+    }
   }
 
   &--right {
     left: 79%;
+
+    @include media-tablet {
+      left: 63%;
+    }
   }
 }

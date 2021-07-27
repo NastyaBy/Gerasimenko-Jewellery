@@ -53,6 +53,10 @@
     text-decoration: none;
     border-bottom: 1px solid $accent-color;
 
+    @include media-tablet {
+      padding-bottom: 6px;
+    }
+
     &:hover {
       border-bottom-color: transparent;
     }
@@ -61,6 +65,10 @@
 
 .new-product__track {
   overflow: hidden;
+
+  @include media-mobile {
+    margin-bottom: 25px;
+  }
 }
 
 .new-product__list {
@@ -68,7 +76,7 @@
   margin: 60px auto 14px;
 
   @include media-tablet {
-    margin: 45px auto 3px;
+    margin: 57px auto 30px;
   }
 
   @include media-mobile {
@@ -108,7 +116,7 @@
     }
 
     @include media-mobile {
-      margin-top: 14px;
+      margin-top: 17px;
     }
   }
 
@@ -127,7 +135,7 @@
   margin: -13px 0 10px;
 
   @include media-tablet {
-    margin: -6px 0 3px;
+    margin: -21px 0 3px;
   }
 
   @include media-mobile {

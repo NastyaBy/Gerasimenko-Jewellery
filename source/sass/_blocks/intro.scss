@@ -11,6 +11,7 @@
   color: $basic-white;
   text-align: center;
   background: $accent-color url("../img/main-desktop@1x.jpg") 50% 50% no-repeat;
+  background-size: cover;
   overflow: hidden;
 
   &::before {
@@ -24,23 +25,24 @@
   }
 
   @include retina-size {
-    background: url("../img/main-desktop@2x.jpg") 50% 50% no-repeat;
+    background-image: url("../img/main-desktop@2x.jpg");
+
   }
 
   @include media-tablet {
-    background: url("../img/main-tablet@1x.jpg") 50% 50% no-repeat;
+    background-image: url("../img/main-tablet@1x.jpg");
 
     @include retina-size {
-      background: url("../img/main-tablet@2x.jpg") 50% 50% no-repeat;
+      background-image: url("../img/main-tablet@2x.jpg");
     }
   }
 
   @include media-mobile {
     padding: 186px 0 194px;
-    background: url("../img/main-mobile@1x.jpg") 50% 50% no-repeat;
+    background-image: url("../img/main-mobile@1x.jpg");
 
     @include retina-size {
-      background: url("../img/main-mobile@2x.jpg") 50% 50% no-repeat;
+      background-image: url("../img/main-mobile@2x.jpg");
     }
   }
 
@@ -82,27 +84,30 @@
 
 .intro--catalog {
   padding: 90px 0 91px;
-  background: $accent-color url("../img/annicken-kzam-unsplash-desktop@1x.jpg") 50% 50% no-repeat;
+  background-image: url("../img/annicken-kzam-unsplash-desktop@1x.jpg");
+
 
   @include retina-size {
-    background: url("../img/annicken-kzam-unsplash-desktop@2x.jpg") 50% 50% no-repeat;
+    background-image: url("../img/annicken-kzam-unsplash-desktop@2x.jpg");
   }
 
   @include media-tablet {
-    padding: 90px 0 93px;
-    background: url("../img/annicken-kzam-unsplash-tablet@1x.jpg") 50% 50% no-repeat;
+    padding: 90px 0 90px;
+    background-image: url("../img/annicken-kzam-unsplash-tablet@1x.jpg");
 
     @include retina-size {
-      background: url("../img/annicken-kzam-unsplash-tablet@2x.jpg") 50% 50% no-repeat;
+      background-image: url("../img/annicken-kzam-unsplash-tablet@2x.jpg");
     }
   }
 
   @include media-mobile {
     padding: 79px 36px 82px;
-    background: url("../img/annicken-kzam-unsplash-mobile@1x.jpg") 50% 50% no-repeat;
+    background-image: url("../img/annicken-kzam-unsplash-mobile@1x.jpg");
+
 
     @include retina-size {
-      background: url("../img/annicken-kzam-unsplash-mobile@2x.jpg") 50% 50% no-repeat;
+      background-image: url("../img/annicken-kzam-unsplash-mobile@2x.jpg");
+
     }
   }
 

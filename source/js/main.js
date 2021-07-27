@@ -25,6 +25,7 @@
   var questions = document.querySelector('.js-questions');
 
   var togglerHandleClick = function (evt) {
+    evt.preventDefault();
     var item = evt.target;
 
     if (item.classList.contains('active')) {
@@ -47,7 +48,7 @@
       });
     }
 
-    var accordionHeading = questions.querySelectorAll('h3');
+    var accordionHeading = questions.querySelectorAll('a');
     if (accordionHeading) {
       accordionHeading.forEach(function (item) {
         item.addEventListener('click', togglerHandleClick);
@@ -68,11 +69,12 @@
 (function () {
   var filter = document.querySelector('.filter');
   if (filter) {
-    var accordionFilter = filter.querySelectorAll('h3');
+    var accordionFilter = filter.querySelectorAll('a');
 
     if (accordionFilter) {
       accordionFilter.forEach(function (item) {
-        item.addEventListener('click', function () {
+        item.addEventListener('click', function (evt) {
+          evt.preventDefault();
           item.classList.toggle('active-filter');
         });
       });

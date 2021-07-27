@@ -12,9 +12,15 @@
   line-height: 18px;
   color: $basic-text;
 
+  @include media-tablet {
+    margin: 0 0 19px;
+  }
+
   &:last-child {
     margin: 0;
   }
+
+
 }
 
 .form-checkbox--modal {
@@ -56,6 +62,7 @@
   user-select: none;
   cursor: pointer;
 
+
   &::before {
     content: "";
     width: 15px;
@@ -66,6 +73,11 @@
     border: 1px solid $accent-color;
     box-sizing: border-box;
     background-size: 16px 16px;
+
+    @include media-tablet {
+      width: 18px;
+      height: 18px;
+    }
   }
 
 
@@ -77,7 +89,7 @@
 
   #{$checkboxIsFocus} + & {
     &::before {
-      box-shadow: 0 0 0 3px $basic-white;
+      box-shadow: 0 0 0 2px $basic-dark;
     }
   }
 }

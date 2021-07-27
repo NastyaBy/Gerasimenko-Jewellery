@@ -24,7 +24,7 @@
       </svg>
     </button>
     <form class="search">
-      <button class="search__submit" type="submit">
+      <button class="search__submit" type="submit" aria-label="search">
         <svg width="14" height="14">
           <use xlink:href="#search"></use>
         </svg>
@@ -72,72 +72,73 @@
     <h2 class="visually-hidden">Catalog</h2>
     <a class="filter-toggle button js-modalOpen" data-popup-trigger="filter" data-popup-scrollable="true" aria-label="Open Filter">Filter</a>
     <form class="filter js-modal" data-popup-modal="filter">
-      <div class="filter__catalog">
-        <div class="filter__item">
-          <h3 class="active-filter">Product</h3>
-          <div class="filter__content filter__content--toggle">
-            <div class="form-checkbox">
-              <input class="form-checkbox__control" type="checkbox" name="color" id="necklaces" value="Necklaces" checked="checked">
-              <label class="form-checkbox__text" for="necklaces">Necklaces</label>
-            </div>
-            <div class="form-checkbox">
-              <input class="form-checkbox__control" type="checkbox" name="color" id="chokers" value="Chokers" checked="checked">
-              <label class="form-checkbox__text" for="chokers">Chokers</label>
-            </div>
-            <div class="form-checkbox">
-              <input class="form-checkbox__control" type="checkbox" name="color" id="rings" value="Rings">
-              <label class="form-checkbox__text" for="rings">Rings</label>
-            </div>
-            <div class="form-checkbox">
-              <input class="form-checkbox__control" type="checkbox" name="color" id="earrings" value="Earrings" checked="checked">
-              <label class="form-checkbox__text" for="earrings">Earrings</label>
-            </div>
-          </div>
-        </div>
-        <div class="filter__item">
-          <h3 class="active-filter">Material</h3>
-          <div class="filter__content filter__content--toggle">
-            <div class="form-checkbox">
-              <input class="form-checkbox__control" type="checkbox" name="color" id="gold" value="Gold">
-              <label class="form-checkbox__text" for="gold">Gold</label>
-            </div>
-            <div class="form-checkbox">
-              <input class="form-checkbox__control" type="checkbox" name="color" id="silver" value="Silver" checked="checked">
-              <label class="form-checkbox__text" for="silver">Silver</label>
+      <div class="filter__inner">
+        <div class="filter__catalog">
+          <div class="filter__item">
+            <a href="#" class="active-filter">Product</a>
+            <div class="filter__content filter__content--toggle">
+              <div class="form-checkbox">
+                <input class="form-checkbox__control" type="checkbox" name="color" id="necklaces" value="Necklaces" checked="checked">
+                <label class="form-checkbox__text" for="necklaces">Necklaces</label>
+              </div>
+              <div class="form-checkbox">
+                <input class="form-checkbox__control" type="checkbox" name="color" id="chokers" value="Chokers" checked="checked">
+                <label class="form-checkbox__text" for="chokers">Chokers</label>
+              </div>
+              <div class="form-checkbox">
+                <input class="form-checkbox__control" type="checkbox" name="color" id="rings" value="Rings">
+                <label class="form-checkbox__text" for="rings">Rings</label>
+              </div>
+              <div class="form-checkbox">
+                <input class="form-checkbox__control" type="checkbox" name="color" id="earrings" value="Earrings" checked="checked">
+                <label class="form-checkbox__text" for="earrings">Earrings</label>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="filter__item">
-          <h3 class="active-filter">Collection</h3>
-          <div class="filter__content filter__content--toggle">
-            <div class="form-checkbox">
-              <input class="form-checkbox__control" type="checkbox" name="color" id="pink-flamingo" value="Pink flamingo" checked="checked">
-              <label class="form-checkbox__text" for="pink-flamingo">Pink flamingo</label>
-            </div>
-            <div class="form-checkbox">
-              <input class="form-checkbox__control" type="checkbox" name="color" id="dreams" value="Dreams" checked="checked">
-              <label class="form-checkbox__text" for="dreams">Dreams</label>
+          <div class="filter__item">
+            <a href="#" class="active-filter">Material</a>
+            <div class="filter__content filter__content--toggle">
+              <div class="form-checkbox">
+                <input class="form-checkbox__control" type="checkbox" name="color" id="gold" value="Gold">
+                <label class="form-checkbox__text" for="gold">Gold</label>
+              </div>
+              <div class="form-checkbox">
+                <input class="form-checkbox__control" type="checkbox" name="color" id="silver" value="Silver" checked="checked">
+                <label class="form-checkbox__text" for="silver">Silver</label>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="filter__item">
-          <h3 class="active-filter">Price</h3>
-          <div class="filter__content filter__content--toggle">
-            <div class="form-slider">
-              <div class="form-slider-info">
-                <div class="form-slider-info__inverse form-slider-info__inverse--left"></div>
-                <div class="form-slider-info__inverse form-slider-info__inverse--right"></div>
-                <div class="form-slider-info__range"></div>
-                <span class="form-slider-info__thumb form-slider-info__thumb--left" data-percent="$ 55"></span>
-                <span class="form-slider-info__thumb form-slider-info__thumb--right" data-percent="$ 155"></span>
+          <div class="filter__item">
+            <a href="#" class="active-filter">Collection</a>
+            <div class="filter__content filter__content--toggle">
+              <div class="form-checkbox">
+                <input class="form-checkbox__control" type="checkbox" name="color" id="pink-flamingo" value="Pink flamingo" checked="checked">
+                <label class="form-checkbox__text" for="pink-flamingo">Pink flamingo</label>
+              </div>
+              <div class="form-checkbox">
+                <input class="form-checkbox__control" type="checkbox" name="color" id="dreams" value="Dreams" checked="checked">
+                <label class="form-checkbox__text" for="dreams">Dreams</label>
+              </div>
+            </div>
+          </div>
+          <div class="filter__item">
+            <a href="#" class="active-filter">Price</a>
+            <div class="filter__content filter__content--toggle">
+              <div class="form-slider">
+                <div class="form-slider-info">
+                  <div class="form-slider-info__inverse form-slider-info__inverse--left"></div>
+                  <div class="form-slider-info__inverse form-slider-info__inverse--right"></div>
+                  <div class="form-slider-info__range"></div>
+                  <span class="form-slider-info__thumb form-slider-info__thumb--left" data-percent="$ 55"></span>
+                  <span class="form-slider-info__thumb form-slider-info__thumb--right" data-percent="$ 155"></span>
+                </div>
               </div>
             </div>
           </div>
         </div>
+        <button class="filter__button button" type="submit">Apply</button>
+        <button class="filter__button button button--white" type="reset">Clear All</button>
       </div>
-      <button class="filter__button button" type="submit">Apply</button>
-      <button class="filter__button button button--white" type="reset">Clear All</button>
-
       <button class="filter__button-close js-modalCloseBtn" type="reset" aria-label="Close filter">
         <svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="16" fill="#1D1613"/><path d="M16 14.445L21.445 9 23 10.555 17.555 16 23 21.445 21.445 23 16 17.555 10.555 23 9 21.445 14.445 16 9 10.555 10.555 9 16 14.445z" fill="#fff"/></svg>
       </button>
@@ -148,9 +149,9 @@
         <a class="catalog__item" href="product-cart.html">
           <picture>
             <!-- 1х: 270px; 2x: 540px -->
-            <source type="image/webp" srcset="./img/double-pearl-earrings@1x.webp 1x, ./img/double-pearl-earrings@2x.webp 2x">
+            <source type="image/webp" srcset="./img/catalog/double-pearl-earrings@1x.webp 1x, ./img/catalog/double-pearl-earrings@2x.webp 2x">
             <!-- 1х: 270px; 2x: 540px -->
-            <img src="./img/double-pearl-earrings@1x.jpg" srcset="./img/double-pearl-earrings@2x.jpg 2x" width="270" height="272" alt="Double pearl earrings">
+            <img src="./img/catalog/double-pearl-earrings@1x.jpg" srcset="./img/catalog/double-pearl-earrings@2x.jpg 2x" width="270" height="272" alt="Double pearl earrings">
           </picture>
           <h3>Double pearl earrings </h3>
           <strong>$ 115</strong>
@@ -158,9 +159,9 @@
         <a class="catalog__item" href="product-cart.html">
           <picture>
             <!-- 1х: 270px; 2x: 540px -->
-            <source type="image/webp" srcset="./img/black-choker-gold-bead@1x.webp 1x, ./img/black-choker-gold-bead@2x.webp 2x">
+            <source type="image/webp" srcset="./img/catalog/black-choker-gold-bead@1x.webp 1x, ./img/catalog/black-choker-gold-bead@2x.webp 2x">
             <!-- 1х: 270px; 2x: 540px -->
-            <img src="./img/black-choker-gold-bead@1x.jpg" srcset="./img/black-choker-gold-bead@2x.jpg 2x" width="270" height="272" alt="Choker with gold bead">
+            <img src="./img/catalog/black-choker-gold-bead@1x.jpg" srcset="./img/catalog/black-choker-gold-bead@2x.jpg 2x" width="270" height="272" alt="Choker with gold bead">
           </picture>
           <h3>Choker with gold bead</h3>
           <strong>$ 55</strong>
@@ -168,9 +169,9 @@
         <a class="catalog__item" href="product-cart.html">
           <picture>
             <!-- 1х: 270px; 2x: 540px -->
-            <source type="image/webp" srcset="./img/gold-layered-necklace@1x.webp 1x, ./img/gold-layered-necklace@2x.webp 2x">
+            <source type="image/webp" srcset="./img/catalog/gold-layered-necklace@1x.webp 1x, ./img/catalog/gold-layered-necklace@2x.webp 2x">
             <!-- 1х: 270px; 2x: 540px -->
-            <img src="./img/gold-layered-necklace@1x.jpg" srcset="./img/gold-layered-necklace@2x.jpg 2x" width="270" height="272" alt="Gold layered necklace">
+            <img src="./img/catalog/gold-layered-necklace@1x.jpg" srcset="./img/catalog/gold-layered-necklace@2x.jpg 2x" width="270" height="272" alt="Gold layered necklace">
           </picture>
           <h3>Gold layered necklace</h3>
           <strong>$ 155</strong>
@@ -178,9 +179,9 @@
         <a class="catalog__item" href="product-cart.html">
           <picture>
             <!-- 1х: 270px; 2x: 540px -->
-            <source type="image/webp" srcset="./img/blue-gemstone-pendant@1x.webp 1x, ./img/blue-gemstone-pendant@2x.webp 2x">
+            <source type="image/webp" srcset="./img/catalog/blue-gemstone-pendant@1x.webp 1x, ./img/catalog/blue-gemstone-pendant@2x.webp 2x">
             <!-- 1х: 270px; 2x: 540px -->
-            <img src="./img/blue-gemstone-pendant@1x.jpg" srcset="./img/blue-gemstone-pendant@2x.jpg 2x" width="270" height="272" alt="Blue gemstone pendant">
+            <img src="./img/catalog/blue-gemstone-pendant@1x.jpg" srcset="./img/catalog/blue-gemstone-pendant@2x.jpg 2x" width="270" height="272" alt="Blue gemstone pendant">
           </picture>
           <h3>Blue gemstone pendant</h3>
           <strong>$ 105</strong>
@@ -188,9 +189,9 @@
         <a class="catalog__item" href="product-cart.html">
           <picture>
             <!-- 1х: 270px; 2x: 540px -->
-            <source type="image/webp" srcset="./img/boho-earrings@1x.webp 1x, ./img/boho-earrings@2x.webp 2x">
+            <source type="image/webp" srcset="./img/catalog/boho-earrings@1x.webp 1x, ./img/catalog/boho-earrings@2x.webp 2x">
             <!-- 1х: 270px; 2x: 540px -->
-            <img src="./img/boho-earrings@1x.jpg" srcset="./img/boho-earrings@2x.jpg 2x" width="270" height="272" alt="Boho earrings">
+            <img src="./img/catalog/boho-earrings@1x.jpg" srcset="./img/catalog/boho-earrings@2x.jpg 2x" width="270" height="272" alt="Boho earrings">
           </picture>
           <h3>Boho earrings</h3>
           <strong>$ 75</strong>
@@ -198,9 +199,9 @@
         <a class="catalog__item" href="product-cart.html">
           <picture>
             <!-- 1х: 270px; 2x: 540px -->
-            <source type="image/webp" srcset="./img/bird-necklace@1x.webp 1x, ./img/bird-necklace@2x.webp 2x">
+            <source type="image/webp" srcset="./img/catalog/bird-necklace@1x.webp 1x, ./img/catalog/bird-necklace@2x.webp 2x">
             <!-- 1х: 270px; 2x: 540px -->
-            <img src="./img/bird-necklace@1x.jpg" srcset="./img/bird-necklace@2x.jpg 2x" width="270" height="272" alt="Gold bird necklace">
+            <img src="./img/catalog/bird-necklace@1x.jpg" srcset="./img/catalog/bird-necklace@2x.jpg 2x" width="270" height="272" alt="Gold bird necklace">
           </picture>
           <h3>Gold bird necklace</h3>
           <strong>$ 135</strong>
@@ -208,9 +209,9 @@
         <a class="catalog__item" href="product-cart.html">
           <picture>
             <!-- 1х: 270px; 2x: 540px -->
-            <source type="image/webp" srcset="./img/black-leather-choker-necklace@1x.webp 1x, ./img/black-leather-choker-necklace@2x.webp 2x">
+            <source type="image/webp" srcset="./img/catalog/black-leather-choker-necklace@1x.webp 1x, ./img/catalog/black-leather-choker-necklace@2x.webp 2x">
             <!-- 1х: 270px; 2x: 540px -->
-            <img src="./img/black-leather-choker-necklace@1x.jpg" srcset="./img/black-leather-choker-necklace@2x.jpg 2x" width="270" height="272" alt="Black leather choker">
+            <img src="./img/catalog/black-leather-choker-necklace@1x.jpg" srcset="./img/catalog/black-leather-choker-necklace@2x.jpg 2x" width="270" height="272" alt="Black leather choker">
           </picture>
           <h3>Black leather choker</h3>
           <strong>$ 85</strong>
@@ -218,9 +219,9 @@
         <a class="catalog__item" href="product-cart.html">
           <picture>
             <!-- 1х: 270px; 2x: 540px -->
-            <source type="image/webp" srcset="./img/purple-gemstone-necklace@1x.webp 1x, ./img/purple-gemstone-necklace@2x.webp 2x">
+            <source type="image/webp" srcset="./img/catalog/purple-gemstone-necklace@1x.webp 1x, ./img/catalog/purple-gemstone-necklace@2x.webp 2x">
             <!-- 1х: 270px; 2x: 540px -->
-            <img src="./img/purple-gemstone-necklace@1x.jpg" srcset="./img/purple-gemstone-necklace@2x.jpg 2x" width="270" height="284" alt="Necklace with amethyst">
+            <img src="./img/catalog/purple-gemstone-necklace@1x.jpg" srcset="./img/catalog/purple-gemstone-necklace@2x.jpg 2x" width="270" height="284" alt="Necklace with amethyst">
           </picture>
           <h3>Necklace with amethyst</h3>
           <strong>$ 145</strong>
@@ -228,9 +229,9 @@
         <a class="catalog__item" href="product-cart.html">
           <picture>
             <!-- 1х: 270px; 2x: 540px -->
-            <source type="image/webp" srcset="./img/elephant-earrings@1x.webp 1x, ./img/elephant-earrings@2x.webp 2x">
+            <source type="image/webp" srcset="./img/catalog/elephant-earrings@1x.webp 1x, ./img/catalog/elephant-earrings@2x.webp 2x">
             <!-- 1х: 270px; 2x: 540px -->
-            <img src="./img/elephant-earrings@1x.jpg" srcset="./img/elephant-earrings@2x.jpg 2x" width="270" height="272" alt="Elephant earrings">
+            <img src="./img/catalog/elephant-earrings@1x.jpg" srcset="./img/catalog/elephant-earrings@2x.jpg 2x" width="270" height="272" alt="Elephant earrings">
           </picture>
           <h3>Elephant earrings</h3>
           <strong>$ 95</strong>
@@ -238,9 +239,9 @@
         <a class="catalog__item" href="product-cart.html">
           <picture>
             <!-- 1х: 270px; 2x: 540px -->
-            <source type="image/webp" srcset="./img/threader-necklace-closeup@1x.webp 1x, ./img/threader-necklace-closeup@2x.webp 2x">
+            <source type="image/webp" srcset="./img/catalog/threader-necklace-closeup@1x.webp 1x, ./img/catalog/threader-necklace-closeup@2x.webp 2x">
             <!-- 1х: 270px; 2x: 540px -->
-            <img src="./img/threader-necklace-closeup@1x.jpg" srcset="./img/threader-necklace-closeup@2x.jpg 2x" width="270" height="272" alt="Threader necklace">
+            <img src="./img/catalog/threader-necklace-closeup@1x.jpg" srcset="./img/catalog/threader-necklace-closeup@2x.jpg 2x" width="270" height="272" alt="Threader necklace">
           </picture>
           <h3>Threader necklace</h3>
           <strong>$ 115</strong>
@@ -248,9 +249,9 @@
         <a class="catalog__item" href="product-cart.html">
           <picture>
             <!-- 1х: 270px; 2x: 540px -->
-            <source type="image/webp" srcset="./img/origami-crane-necklace@1x.webp 1x, ./img/origami-crane-necklace@2x.webp 2x">
+            <source type="image/webp" srcset="./img/catalog/origami-crane-necklace@1x.webp 1x, ./img/catalog/origami-crane-necklace@2x.webp 2x">
             <!-- 1х: 270px; 2x: 540px -->
-            <img src="./img/origami-crane-necklace@1x.jpg" srcset="./img/origami-crane-necklace@2x.jpg 2x" width="270" height="272" alt="Origami crane necklace">
+            <img src="./img/catalog/origami-crane-necklace@1x.jpg" srcset="./img/catalog/origami-crane-necklace@2x.jpg 2x" width="270" height="272" alt="Origami crane necklace">
           </picture>
           <h3>Origami crane necklace</h3>
           <strong>$ 105</strong>
@@ -258,9 +259,9 @@
         <a class="catalog__item" href="product-cart.html">
           <picture>
             <!-- 1х: 270px; 2x: 540px -->
-            <source type="image/webp" srcset="./img/marble-earrings@1x.webp 1x, ./img/marble-earrings@2x.webp 2x">
+            <source type="image/webp" srcset="./img/catalog/marble-earrings@1x.webp 1x, ./img/catalog/marble-earrings@2x.webp 2x">
             <!-- 1х: 270px; 2x: 540px -->
-            <img src="./img/marble-earrings@1x.jpg" srcset="./img/marble-earrings@2x.jpg 2x" width="270" height="272" alt="Marble earrings">
+            <img src="./img/catalog/marble-earrings@1x.jpg" srcset="./img/catalog/marble-earrings@2x.jpg 2x" width="270" height="272" alt="Marble earrings">
           </picture>
           <h3>Marble earrings</h3>
           <strong>$ 95</strong>
@@ -292,7 +293,7 @@
         <div class="mailing-form__row">
           <div class="form-input">
             <label class="visually-hidden" for="your-email">Your e-mail</label>
-            <input id="your-email" type="text" placeholder="Your E-mail"/>
+            <input id="your-email" type="text" placeholder="Your E-mail" required/>
           </div>
           <button type="submit">Sign Up
             <svg width="30" height="11">
@@ -373,9 +374,9 @@
     </picture>
     <form class="form js-form" name="modalForm" id="modalForm" action="https://echo.htmlacademy.ru" method="get">
       <h2>Log In</h2>
-      <div class="form-input form-input--login">
+      <div class="form-input form-input--login form-input--login-email">
         <label class="visually-hidden" for="email">Your E-mail</label>
-        <input class="js-email" type="email" maxlength="50" id="email" name="e-mail" placeholder="Your E-mail" aria-label="Your E-mail">
+        <input class="js-email" type="email" maxlength="50" id="email" name="e-mail" placeholder="Your E-mail" aria-label="Your E-mail" required>
       </div>
       <div class="form-input form-input--login">
         <label class="visually-hidden" for="password">Password</label>
