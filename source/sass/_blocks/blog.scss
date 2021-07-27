@@ -34,7 +34,6 @@
     display: block;
     width: 100%;
     height: auto;
-    min-height: 100%;
     object-fit: cover;
 
     @include media-tablet {
@@ -121,11 +120,13 @@
   }
 
   img {
+    position: absolute;
     max-height: 300px;
     min-height: 100%;
     object-position: top;
 
     @include media-tablet {
+      position: static;
       min-height: unset;
     }
 

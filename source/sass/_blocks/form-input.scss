@@ -16,6 +16,10 @@
     line-height: 21px;
     border: none;
     outline: none;
+
+    &::placeholder {
+      color: $mailing-form-text;
+    }
   }
 
   &--login {
