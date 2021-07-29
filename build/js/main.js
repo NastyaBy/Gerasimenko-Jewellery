@@ -124,6 +124,8 @@
 
     evt.preventDefault();
     popupModal.classList.add('is--visible');
+    layout.classList.add('layout--no-scroll');
+
     if (bodyBlackout) {
       bodyBlackout.classList.add('is-blacked-out');
 
@@ -139,6 +141,8 @@
 
     modalCloseBtn.addEventListener('click', function () {
       popupModal.classList.remove('is--visible');
+      layout.classList.remove('layout--no-scroll');
+
       if (bodyBlackout) {
         bodyBlackout.classList.remove('is-blacked-out');
       }

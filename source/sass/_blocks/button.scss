@@ -17,6 +17,7 @@
   cursor: pointer;
   border: 1px solid $accent-color;
   box-sizing: border-box;
+  flex-shrink: 0;
 
   &:hover {
     color: $accent-color;

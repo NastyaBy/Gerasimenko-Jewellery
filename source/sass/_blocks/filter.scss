@@ -24,19 +24,16 @@
     background: $basic-white;
     transform: translateY(-50%);
     box-shadow: 0 5px 32px rgba(219, 213, 208, 0.24);
-
-
   }
 
   @include media-mobile {
     width: unset;
-    top: 25px;
-    right: 25px;
-    left: 25px;
+    top: 0;
+    right: 0;
+    left: 0;
     max-height: calc(100vh - 60px);
     padding-bottom: 10px;
     transform: unset;
-    overflow: auto;
     box-shadow: 0 5px 32px rgba(219, 213, 208, 0.24), 0 0 0 100px $basic-white;
   }
 }
@@ -87,8 +84,15 @@
 .filter__inner {
   display: flex;
   flex-direction: column;
-  max-height: 90vh;
-  overflow: auto;
+
+  @include media-tablet {
+    max-height: 90vh;
+    overflow: auto;
+  }
+
+  @include media-mobile {
+    padding: 15px 0 25px;
+  }
 }
 
 .filter__catalog {
@@ -165,5 +169,11 @@ a.active-filter + .filter__content--toggle {
   @include media-tablet {
     margin-top: -15px;
     padding: 5px 32px 40px 52px;
+  }
+}
+
+.filter__button.button--white {
+  @include media-mobile {
+    margin-bottom: 10px;
   }
 }

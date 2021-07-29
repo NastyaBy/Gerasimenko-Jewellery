@@ -20,6 +20,7 @@
   margin: 0 auto;
   padding: 0;
   width: 450px;
+  max-height: 90vh;
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -29,6 +30,7 @@
   transition: opacity 100ms linear;
   color: $basic-white;
   background: $background-modal;
+  overflow: auto;
 
   &--login {
     width: 430px;
@@ -39,6 +41,7 @@
 
     @include media-mobile {
       width: 270px;
+      transform: translateY(50px);
     }
   }
 
