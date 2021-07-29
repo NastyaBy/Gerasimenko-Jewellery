@@ -392,6 +392,12 @@
 
 <div class="modal js-modal" data-popup-modal="add-to-cart">
   <div class="modal__inner modal__inner--add-to-cart">
+    <button class="modal__button-close js-modalCloseBtn" type="reset" id="close" aria-label="Close add to cart">
+      <svg width="17" height="17">
+        <use xlink:href="#close-icon"></use>
+      </svg>
+    </button>
+
     <div class="add-to-cart">
       <h2>The item was added<br class="br-mobile"> to your cart</h2>
       <div class="add-to-cart__product">
@@ -428,11 +434,6 @@
         <a class="button button--white" href="catalog.html" aria-label="Continue shopping">Continue shopping</a>
         <a class="button" href="#" >Checkout</a>
       </div>
-      <button class="modal__button-close js-modalCloseBtn" type="reset" id="close" aria-label="Close add to cart">
-        <svg width="17" height="17">
-          <use xlink:href="#close-icon"></use>
-        </svg>
-      </button>
     </div>
   </div>
   <i class="modal__blackout js-modalBlackout"></i>

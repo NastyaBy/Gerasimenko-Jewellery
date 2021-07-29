@@ -108,6 +108,7 @@
 (function () {
   var layout = document.querySelector('.layout');
   var modalTriggers = document.querySelectorAll('.js-modalOpen');
+  var lastFocus;
 
   var triggerHandleClick = function (trigger, evt) {
     var popupTrigger = trigger.dataset.popupTrigger;
@@ -117,9 +118,14 @@
     var bodyBlackout = popupModal.querySelector('.js-modalBlackout');
     var modalCloseBtn = popupModal.querySelector('.js-modalCloseBtn');
     var popupScrollable = trigger.dataset.popupScrollable;
+    lastFocus = document.activeElement;
 
     if (popupFocus) {
+      popupModal.setAttribute('tabindex', '0');
       popupFocus.focus();
+    } else  {
+      popupModal.setAttribute('tabindex', '0');
+      popupModal.focus();
     }
 
     evt.preventDefault();
@@ -140,8 +146,10 @@
     }
 
     modalCloseBtn.addEventListener('click', function () {
+      popupModal.removeAttribute('tabindex');
       popupModal.classList.remove('is--visible');
       layout.classList.remove('layout--no-scroll');
+      lastFocus.focus();
 
       if (bodyBlackout) {
         bodyBlackout.classList.remove('is-blacked-out');
@@ -155,7 +163,10 @@
       if (e.keyCode === 27) {
         if (popupModal.classList.contains('is--visible')) {
           e.preventDefault();
+          popupModal.removeAttribute('tabindex');
           popupModal.classList.remove('is--visible');
+          lastFocus.focus();
+
           if (bodyBlackout) {
             bodyBlackout.classList.remove('is-blacked-out');
           }
